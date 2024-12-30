@@ -82,6 +82,115 @@ Reader::Reader(const char *filename){
             fin >> xcenter >> ycenter >> zcenter >> rx >> ry >> rz;
             figs.push_back(new CutEllipsoid(xcenter,ycenter,zcenter,rx,ry,rz));
         }
+
+        if(s.compare("FOR_PUTVOXEL")==0){
+            int it,for_i;
+            int x,y,z;
+            float r,g,b,a;
+            fin >> it >> for_i;
+            fin >> x >> y >> z;
+            fin >> r >> g >> b >> a;
+            for(int i=it; i<for_i; i++){
+                if(x==-1){
+                    figs.push_back(new PutVoxel(i,y,z,r,g,b,a));
+                }
+                if(y==-1){
+                    figs.push_back(new PutVoxel(x,i,z,r,g,b,a));
+                }
+                if(z==-1){
+                    figs.push_back(new PutVoxel(x,y,i,r,g,b,a));
+                }
+            }
+        }
+        if(s.compare("FOR_CUTVOXEL")==0){
+            int it,for_i;
+            int x,y,z;
+            fin >> it >> for_i;
+            fin >> x >> y >> z;
+            for(int i=it; i<for_i; i++){
+                if(x==-1){
+                    figs.push_back(new CutVoxel(i,y,z));
+                }
+                if(y==-1){
+                    figs.push_back(new CutVoxel(x,i,z));
+                }
+                if(z==-1){
+                    figs.push_back(new CutVoxel(x,y,i));
+                }
+            }
+        }
+        if(s.compare("FOR_PUTSPHERE")==0){
+            int it, for_i;
+            int xcenter, ycenter, zcenter, radius;
+            float r,g,b,a;
+            fin >> it >> for_i;
+            fin >> xcenter >> ycenter >> zcenter >> radius;
+            fin >> r >> g >> b >> a;
+            for(int i=it; i<for_i; i++){
+                if(xcenter==-1){
+                    figs.push_back(new PutSphere(i,ycenter,zcenter,radius,r,g,b,a));
+                }
+                if(ycenter==-1){
+                    figs.push_back(new PutSphere(xcenter,i,zcenter,radius,r,g,b,a));
+                }
+                if(zcenter==-1){
+                    figs.push_back(new PutSphere(xcenter,ycenter,i,radius,r,g,b,a));
+                }
+            }
+        }
+        if(s.compare("FOR_CUTSPHERE")==0){
+            int it, for_i;
+            int xcenter, ycenter, zcenter, radius;
+            fin >> it >> for_i;
+            fin >> xcenter >> ycenter >> zcenter >> radius;
+            for(int i=it; i<for_i; i++){
+                if(xcenter==-1){
+                    figs.push_back(new CutSphere(i,ycenter,zcenter,radius));
+                }
+                if(ycenter==-1){
+                    figs.push_back(new CutSphere(xcenter,i,zcenter,radius));
+                }
+                if(zcenter==-1){
+                    figs.push_back(new CutSphere(xcenter,ycenter,i,radius));
+                }
+            }
+        }
+        if(s.compare("FOR_PUTELLIPSOID")==0){
+            int it, for_i;
+            int xcenter, ycenter, zcenter, rx, ry, rz;
+            float r,g,b,a;
+            fin >> it >> for_i;
+            fin >> xcenter >> ycenter >> zcenter >> rx >> ry >> rz;
+            fin >> r >> g >> b >> a;
+            for(int i=it; i<for_i; i++){
+                if(xcenter==-1){
+                    figs.push_back(new PutEllipsoid(i,ycenter,zcenter,rx,ry,rz,r,g,b,a));
+                }
+                if(ycenter==-1){
+                    figs.push_back(new PutEllipsoid(xcenter,i,zcenter,rx,ry,rz,r,g,b,a));
+                }
+                if(zcenter==-1){
+                    figs.push_back(new PutEllipsoid(xcenter,ycenter,i,rx,ry,rz,r,g,b,a));
+                }
+            }
+        }
+        if(s.compare("FOR_CUTELLIPSOID")==0){
+            int it, for_i;
+            int xcenter, ycenter, zcenter, rx, ry, rz;
+            fin >> it >> for_i;
+            fin >> xcenter >> ycenter >> zcenter >> rx >> ry >> rz;
+            for(int i=it; i<for_i; i++){
+                if(xcenter==-1){
+                    figs.push_back(new CutEllipsoid(i,ycenter,zcenter,rx,ry,rz));
+                }
+                if(ycenter==-1){
+                    figs.push_back(new CutEllipsoid(xcenter,i,zcenter,rx,ry,rz));
+                }
+                if(zcenter==-1){
+                    figs.push_back(new CutEllipsoid(xcenter,ycenter,i,rx,ry,rz));
+                }
+            }
+        }
     }
 }
 
@@ -95,6 +204,18 @@ void Reader::draw(Sculptor &s){
     for(auto i : figs){
         i->draw(s);
     }
+}
+
+int Reader::getDimX(){
+    return dimX;
+}
+
+int Reader::getDimY(){
+    return dimY;
+}
+
+int Reader::getDimZ(){
+    return dimZ;
 }
 
 
