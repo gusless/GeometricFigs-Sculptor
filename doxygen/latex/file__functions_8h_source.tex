@@ -1,0 +1,51 @@
+\doxysection{C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/file\+\_\+functions.h}
+\hypertarget{file__functions_8h_source}{}\label{file__functions_8h_source}\mbox{\hyperlink{file__functions_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FILE\_FUNCTIONS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FILE\_FUNCTIONS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <filesystem>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }fs\ =\ std::filesystem;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ std::string\ \mbox{\hyperlink{file__functions_8h_acb29d59d0a567642a9ed109b77ede658}{find\_path}}(\textcolor{keyword}{const}\ std::string\ \&directory,\ \textcolor{keyword}{const}\ std::string\ \&filename)\{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&entry\ :\ fs::recursive\_directory\_iterator(directory))\{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ entry.path().string()\ <<\ std::endl;}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(entry.is\_regular\_file()\ \&\&\ entry.path().filename()\ ==\ filename)\{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ fs::absolute(entry.path()).string();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}(\textcolor{keyword}{const}\ std::filesystem::filesystem\_error\ \&e)\{}
+\DoxyCodeLine{00021\ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Erro\ ao\ acessar\ a\ pasta"{}}\ <<\ e.what()\ <<\ std::endl;}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00024\ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{//funcao\ para\ abrir\ o\ arquivo\ no\ windows}}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{file__functions_8h_aae2622c61a0fcaaa002d65dc4c436906}{win\_open\_file}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename)\{}
+\DoxyCodeLine{00028\ \ \ \ \ std::string\ file(filename);}
+\DoxyCodeLine{00029\ \ \ \ \ std::string\ file\_local\ =\ \mbox{\hyperlink{file__functions_8h_acb29d59d0a567642a9ed109b77ede658}{find\_path}}(\textcolor{stringliteral}{"{}../../"{}},file);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{char}\ file\_path[200];}
+\DoxyCodeLine{00032\ \ \ \ \ file\_local.copy(file\_path,file\_local.size());}
+\DoxyCodeLine{00033\ \ \ \ \ file\_path[file\_local.size()]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ filename\ <<\ std::endl;}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ file\_path\ <<\ std::endl;}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{if}(!std::ifstream(file\_path))\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Arquivo\ nao\ encontrado"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00043\ \ \ \ \ ShellExecute(0,\ \textcolor{stringliteral}{"{}open"{}},\ file\_path,\ NULL,\ NULL,\ SW\_SHOWNORMAL);}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00045\ \}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FILE\_FUNCTIONS\_H}}
+
+\end{DoxyCode}

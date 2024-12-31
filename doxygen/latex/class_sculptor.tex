@@ -1,0 +1,163 @@
+\doxysection{Sculptor Class Reference}
+\hypertarget{class_sculptor}{}\label{class_sculptor}\index{Sculptor@{Sculptor}}
+
+
+{\ttfamily \#include $<$sculptor.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sculptor_ac803d75599ad955b7c2693c613c8d5e5}{Sculptor}} (int \+\_\+nx, int \+\_\+ny, int \mbox{\hyperlink{class_sculptor_a33204e7df26a7ee4c7192381a24335d3}{nz}})
+\item 
+\mbox{\hyperlink{class_sculptor_a8f159bf97458326f16d2e238e11be7ff}{\texorpdfstring{$\sim$}{\string~}\+Sculptor}} ()
+\item 
+void \mbox{\hyperlink{class_sculptor_a4351c930a07887e96d4fdbf251a7867e}{set\+Color}} (float \mbox{\hyperlink{class_sculptor_a3f5d2ec3b66d645019b8d81c810a1cd8}{r}}, float \mbox{\hyperlink{class_sculptor_a208c06af69a81a1568df4493868816f1}{g}}, float \mbox{\hyperlink{class_sculptor_a7aafd7305ea634252d8288b60536cd96}{b}}, float \mbox{\hyperlink{class_sculptor_a6fd0157dcf17582f0edd5fddf157604e}{a}})
+\item 
+void \mbox{\hyperlink{class_sculptor_a4bdea3048b419d58e93074060eaa7b52}{put\+Voxel}} (int x, int y, int z)
+\item 
+void \mbox{\hyperlink{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c}{cut\+Voxel}} (int x, int y, int z)
+\item 
+void \mbox{\hyperlink{class_sculptor_a58cb72d22001a5034f15383ca983830c}{write\+OFF}} (const char \texorpdfstring{$\ast$}{*}filename)
+\item 
+int \mbox{\hyperlink{class_sculptor_a09c163c74abfdf3caad6022002346bd4}{getX}} ()
+\item 
+int \mbox{\hyperlink{class_sculptor_a9f91148548f8a40df5ef708982ee1f7d}{getY}} ()
+\item 
+int \mbox{\hyperlink{class_sculptor_a173c8acbff2f0309aa10835d97f47259}{getZ}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_voxel}{Voxel}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sculptor_a4ca53a2f2fbf41ca42dfe729ebe693f1}{v}}
+\item 
+int \mbox{\hyperlink{class_sculptor_ad1e32f9042538419a3bc7b376f7813b8}{nx}}
+\item 
+int \mbox{\hyperlink{class_sculptor_a1ce2ff97ec94927928ab3f5ec4ba6761}{ny}}
+\item 
+int \mbox{\hyperlink{class_sculptor_a33204e7df26a7ee4c7192381a24335d3}{nz}}
+\item 
+float \mbox{\hyperlink{class_sculptor_a3f5d2ec3b66d645019b8d81c810a1cd8}{r}}
+\item 
+float \mbox{\hyperlink{class_sculptor_a208c06af69a81a1568df4493868816f1}{g}}
+\item 
+float \mbox{\hyperlink{class_sculptor_a7aafd7305ea634252d8288b60536cd96}{b}}
+\item 
+float \mbox{\hyperlink{class_sculptor_a6fd0157dcf17582f0edd5fddf157604e}{a}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sculptor_ac803d75599ad955b7c2693c613c8d5e5}\index{Sculptor@{Sculptor}!Sculptor@{Sculptor}}
+\index{Sculptor@{Sculptor}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{Sculptor()}{Sculptor()}}
+{\footnotesize\ttfamily \label{class_sculptor_ac803d75599ad955b7c2693c613c8d5e5} 
+Sculptor\+::\+Sculptor (\begin{DoxyParamCaption}\item[{int}]{\+\_\+nx}{, }\item[{int}]{\+\_\+ny}{, }\item[{int}]{nz}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_sculptor_a8f159bf97458326f16d2e238e11be7ff}\index{Sculptor@{Sculptor}!````~Sculptor@{\texorpdfstring{$\sim$}{\string~}Sculptor}}
+\index{````~Sculptor@{\texorpdfstring{$\sim$}{\string~}Sculptor}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Sculptor()}{\string~Sculptor()}}
+{\footnotesize\ttfamily \label{class_sculptor_a8f159bf97458326f16d2e238e11be7ff} 
+Sculptor\+::\texorpdfstring{$\sim$}{\string~}\+Sculptor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c}\index{Sculptor@{Sculptor}!cutVoxel@{cutVoxel}}
+\index{cutVoxel@{cutVoxel}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{cutVoxel()}{cutVoxel()}}
+{\footnotesize\ttfamily \label{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c} 
+void Sculptor\+::cut\+Voxel (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{z}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_sculptor_a09c163c74abfdf3caad6022002346bd4}\index{Sculptor@{Sculptor}!getX@{getX}}
+\index{getX@{getX}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily \label{class_sculptor_a09c163c74abfdf3caad6022002346bd4} 
+int Sculptor\+::getX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_sculptor_a9f91148548f8a40df5ef708982ee1f7d}\index{Sculptor@{Sculptor}!getY@{getY}}
+\index{getY@{getY}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily \label{class_sculptor_a9f91148548f8a40df5ef708982ee1f7d} 
+int Sculptor\+::getY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_sculptor_a173c8acbff2f0309aa10835d97f47259}\index{Sculptor@{Sculptor}!getZ@{getZ}}
+\index{getZ@{getZ}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{getZ()}{getZ()}}
+{\footnotesize\ttfamily \label{class_sculptor_a173c8acbff2f0309aa10835d97f47259} 
+int Sculptor\+::getZ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_sculptor_a4bdea3048b419d58e93074060eaa7b52}\index{Sculptor@{Sculptor}!putVoxel@{putVoxel}}
+\index{putVoxel@{putVoxel}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{putVoxel()}{putVoxel()}}
+{\footnotesize\ttfamily \label{class_sculptor_a4bdea3048b419d58e93074060eaa7b52} 
+void Sculptor\+::put\+Voxel (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{z}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_sculptor_a4351c930a07887e96d4fdbf251a7867e}\index{Sculptor@{Sculptor}!setColor@{setColor}}
+\index{setColor@{setColor}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily \label{class_sculptor_a4351c930a07887e96d4fdbf251a7867e} 
+void Sculptor\+::set\+Color (\begin{DoxyParamCaption}\item[{float}]{r}{, }\item[{float}]{g}{, }\item[{float}]{b}{, }\item[{float}]{a}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_sculptor_a58cb72d22001a5034f15383ca983830c}\index{Sculptor@{Sculptor}!writeOFF@{writeOFF}}
+\index{writeOFF@{writeOFF}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{writeOFF()}{writeOFF()}}
+{\footnotesize\ttfamily \label{class_sculptor_a58cb72d22001a5034f15383ca983830c} 
+void Sculptor\+::write\+OFF (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_sculptor_a6fd0157dcf17582f0edd5fddf157604e}\index{Sculptor@{Sculptor}!a@{a}}
+\index{a@{a}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily \label{class_sculptor_a6fd0157dcf17582f0edd5fddf157604e} 
+float Sculptor\+::a}
+
+\Hypertarget{class_sculptor_a7aafd7305ea634252d8288b60536cd96}\index{Sculptor@{Sculptor}!b@{b}}
+\index{b@{b}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily \label{class_sculptor_a7aafd7305ea634252d8288b60536cd96} 
+float Sculptor\+::b}
+
+\Hypertarget{class_sculptor_a208c06af69a81a1568df4493868816f1}\index{Sculptor@{Sculptor}!g@{g}}
+\index{g@{g}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily \label{class_sculptor_a208c06af69a81a1568df4493868816f1} 
+float Sculptor\+::g}
+
+\Hypertarget{class_sculptor_ad1e32f9042538419a3bc7b376f7813b8}\index{Sculptor@{Sculptor}!nx@{nx}}
+\index{nx@{nx}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{nx}{nx}}
+{\footnotesize\ttfamily \label{class_sculptor_ad1e32f9042538419a3bc7b376f7813b8} 
+int Sculptor\+::nx}
+
+\Hypertarget{class_sculptor_a1ce2ff97ec94927928ab3f5ec4ba6761}\index{Sculptor@{Sculptor}!ny@{ny}}
+\index{ny@{ny}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{ny}{ny}}
+{\footnotesize\ttfamily \label{class_sculptor_a1ce2ff97ec94927928ab3f5ec4ba6761} 
+int Sculptor\+::ny}
+
+\Hypertarget{class_sculptor_a33204e7df26a7ee4c7192381a24335d3}\index{Sculptor@{Sculptor}!nz@{nz}}
+\index{nz@{nz}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{nz}{nz}}
+{\footnotesize\ttfamily \label{class_sculptor_a33204e7df26a7ee4c7192381a24335d3} 
+int Sculptor\+::nz}
+
+\Hypertarget{class_sculptor_a3f5d2ec3b66d645019b8d81c810a1cd8}\index{Sculptor@{Sculptor}!r@{r}}
+\index{r@{r}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily \label{class_sculptor_a3f5d2ec3b66d645019b8d81c810a1cd8} 
+float Sculptor\+::r}
+
+\Hypertarget{class_sculptor_a4ca53a2f2fbf41ca42dfe729ebe693f1}\index{Sculptor@{Sculptor}!v@{v}}
+\index{v@{v}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{v}{v}}
+{\footnotesize\ttfamily \label{class_sculptor_a4ca53a2f2fbf41ca42dfe729ebe693f1} 
+\mbox{\hyperlink{struct_voxel}{Voxel}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Sculptor\+::v}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\mbox{\hyperlink{sculptor_8h}{sculptor.\+h}}\item 
+C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\mbox{\hyperlink{sculptor_8cpp}{sculptor.\+cpp}}\end{DoxyCompactItemize}
