@@ -71,9 +71,13 @@ PUTVOXEL 2 2 2 0 100 50 1
 PUTBOX 3 3 3 5 5 5 100 20 0 1
 ```
 
+### Exemplo real de entrada: [Arquivo TXT](Project_Figura_Geometrica/txtFile.txt)
+
 ### Saída:
 
 Após processar as instruções fornecidas no arquivo TXT, um arquivo **OFF** será gerado, representando o modelo 3D criado com os voxels, caixas, esferas e elipsoides conforme as especificações.
+
+### Exemplo real de saída: [Arquivo OFF](Project_Figura_Geometrica/offFile.off)
 
 Essa estrutura melhorada organiza a informação de maneira mais clara, detalha cada comando e exemplo de entrada/saída, facilitando a compreensão e o uso do arquivo TXT para gerar o modelo 3D.
 
