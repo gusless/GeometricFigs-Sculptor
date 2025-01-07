@@ -119,6 +119,6 @@ Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE](
 
 - **Desenvolvedor**: Augusto César
   
-Agradecemos a todos que contribuíram para este projeto e ajudaram a melhorar sua qualidade!
+Agradeço a todos que contribuíram para este projeto e ajudaram a melhorar sua qualidade!
 
 
