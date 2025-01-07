@@ -1,4 +1,4 @@
-# Figura Geométrica
+# Figura Geométrica - Sculptor
 
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![C++](https://img.shields.io/badge/language-C%2B%2B-blue)
@@ -6,7 +6,7 @@
 
 ## Descrição
 
-O **Figura Geométrica** é um projeto desenvolvido em **C++**, utilizando programação orientada a objetos, que converte arquivos TXT contendo uma série de instruções predefinidas em arquivos **OFF**. Esses arquivos são utilizados para representar modelos tridimensionais. 
+O **Figura Geométrica - Sculptor** é um projeto desenvolvido em **C++**, utilizando programação orientada a objetos, que converte arquivos TXT contendo uma série de instruções predefinidas em arquivos **OFF**. Esses arquivos são utilizados para representar modelos tridimensionais. 
 
 O projeto oferece uma estrutura modular para manipulação e geração de figuras geométricas tridimensionais.
 
