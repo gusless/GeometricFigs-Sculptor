@@ -1,12 +1,12 @@
-\doxysection{C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/main.cpp File Reference}
-\hypertarget{main_8cpp}{}\label{main_8cpp}\index{C:/Users/Gusto/Desktop/projects/figura\_geometrica/main.cpp@{C:/Users/Gusto/Desktop/projects/figura\_geometrica/main.cpp}}
+\doxysection{C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\+Project\+\_\+\+Figura\+\_\+\+Geometrica/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{C:/Users/Gusto/Desktop/projects/figura\_geometrica/Project\_Figura\_Geometrica/main.cpp@{C:/Users/Gusto/Desktop/projects/figura\_geometrica/Project\_Figura\_Geometrica/main.cpp}}
 {\ttfamily \#include "{}reader.\+h"{}}\newline
 {\ttfamily \#include "{}file\+\_\+functions.\+h"{}}\newline
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Função principal do programa para gerar e manipular um arquivo OFF baseado em um arquivo TXT. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -16,3 +16,22 @@ int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 {\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
 int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+
+
+Função principal do programa para gerar e manipular um arquivo OFF baseado em um arquivo TXT. 
+
+Esta função executa o fluxo principal do programa, realizando as seguintes operações\+:
+\begin{DoxyEnumerate}
+\item Localiza um arquivo TXT contendo instruções predefinidas para construção de objetos.
+\item Lê o conteúdo do arquivo TXT e inicializa um objeto {\ttfamily \doxylink{class_sculptor}{Sculptor}} com base nas dimensões especificadas.
+\item Executa os comandos do arquivo TXT para desenhar o objeto no espaço 3D.
+\item Salva o resultado no formato OFF.
+\item Abre o arquivo OFF gerado para visualização ou processamento adicional.
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Returns}
+int Retorna 0 se a execução foi bem-\/sucedida. 
+\end{DoxyReturn}
+\texorpdfstring{$<$}{<} Nome do arquivo de saída no formato OFF.
+
+\texorpdfstring{$<$}{<} Nome do arquivo TXT contendo instruções.

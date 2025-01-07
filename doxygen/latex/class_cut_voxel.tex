@@ -2,6 +2,11 @@
 \hypertarget{class_cut_voxel}{}\label{class_cut_voxel}\index{CutVoxel@{CutVoxel}}
 
 
+Sub-\/classe de {\ttfamily Figura\+Geométrica} para colocar um voxel em uma coordenada específicada.  
+
+
+
+
 {\ttfamily \#include $<$cutvoxel.\+h$>$}
 
 Inheritance diagram for Cut\+Voxel\+:\begin{figure}[H]
@@ -21,28 +26,31 @@ void \mbox{\hyperlink{class_cut_voxel_a72bb583540f93f6f5345db1499417716}{draw}} 
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_figura_geometrica_a81d7c7efaea511e60a15f5a363138dd9}{Figura\+Geometrica}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe {\ttfamily \doxylink{class_figura_geometrica}{Figura\+Geometrica}}. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_figura_geometrica_ad13b9bccf1b14f6b9fbc662aad61ffd1}{\texorpdfstring{$\sim$}{\string~}\+Figura\+Geometrica}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destrutor virtual da classe {\ttfamily \doxylink{class_figura_geometrica}{Figura\+Geometrica}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_figura_geometrica}{Figura\+Geometrica}}}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{class_figura_geometrica_ac7808b6b6074bf744ee597851651e9c5}{x}}
-\item 
+\begin{DoxyCompactList}\small\item\em Coordenada X da figura. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_figura_geometrica_ae5ddcf7439aa7274d7f818e49503402a}{y}}
-\item 
+\begin{DoxyCompactList}\small\item\em Coordenada Y da figura. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_figura_geometrica_aa121633ded95c66066a32ba51a118fbb}{z}}
-\item 
+\begin{DoxyCompactList}\small\item\em Coordenada Z da figura. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_figura_geometrica_a0a4f57efb1a6c525c8aeee34c92e7eab}{r}}
-\item 
+\begin{DoxyCompactList}\small\item\em Intensidade da cor vermelha, de 0 a 255. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_figura_geometrica_a51930549bcb90d016b824f10f95df355}{g}}
-\item 
+\begin{DoxyCompactList}\small\item\em Intensidade da cor verde, de 0 a 255. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_figura_geometrica_a25e5d6c21410103c25ec55c0117dac0d}{b}}
-\item 
+\begin{DoxyCompactList}\small\item\em Intensidade da cor azul, de 0 a 255. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_figura_geometrica_ae7c8a027fcec3c357265b90458a4d165}{a}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Transparência (alpha), onde 0.\+0 é totalmente transparente e 1.\+0 é totalmente opaco. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Sub-\/classe de {\ttfamily Figura\+Geométrica} para colocar um voxel em uma coordenada específicada. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_cut_voxel_a32d12f653ebb96da8c3aa62994692bad}\index{CutVoxel@{CutVoxel}!CutVoxel@{CutVoxel}}
@@ -51,6 +59,15 @@ float \mbox{\hyperlink{class_figura_geometrica_ae7c8a027fcec3c357265b90458a4d165
 {\footnotesize\ttfamily \label{class_cut_voxel_a32d12f653ebb96da8c3aa62994692bad} 
 Cut\+Voxel\+::\+Cut\+Voxel (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{z}{}\end{DoxyParamCaption})}
 
+Método para apagar o voxel com a coordenada especificada. 
+\begin{DoxyParams}{Parameters}
+{\em x} & Coordenada X do ponto. \\
+\hline
+{\em y} & Coordenada Y do ponto. \\
+\hline
+{\em x} & Coordenada Y do ponto. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -60,6 +77,11 @@ Cut\+Voxel\+::\+Cut\+Voxel (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{in
 {\footnotesize\ttfamily \label{class_cut_voxel_a72bb583540f93f6f5345db1499417716} 
 void Cut\+Voxel\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sculptor}{Sculptor}} \&}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+Método para desenhar a figura geométrica. 
+\begin{DoxyParams}{Parameters}
+{\em \&s} & \doxylink{class_sculptor}{Sculptor} com a figura geométrica específica. \\
+\hline
+\end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{class_figura_geometrica_a140c20d043bc6bfb4952a367d8ed6c1c}{Figura\+Geometrica}}.
@@ -68,5 +90,5 @@ Implements \mbox{\hyperlink{class_figura_geometrica_a140c20d043bc6bfb4952a367d8e
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\mbox{\hyperlink{cutvoxel_8h}{cutvoxel.\+h}}\item 
-C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\mbox{\hyperlink{cutvoxel_8cpp}{cutvoxel.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\+Project\+\_\+\+Figura\+\_\+\+Geometrica/\mbox{\hyperlink{cutvoxel_8h}{cutvoxel.\+h}}\item 
+C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\+Project\+\_\+\+Figura\+\_\+\+Geometrica/\mbox{\hyperlink{cutvoxel_8cpp}{cutvoxel.\+cpp}}\end{DoxyCompactItemize}

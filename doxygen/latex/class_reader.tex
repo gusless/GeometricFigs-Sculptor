@@ -2,6 +2,11 @@
 \hypertarget{class_reader}{}\label{class_reader}\index{Reader@{Reader}}
 
 
+Classe que serve para ler um arquivo TXT com as instruções para gerar uma escultura 3D em um arquivo OFF.  
+
+
+
+
 {\ttfamily \#include $<$reader.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
@@ -10,7 +15,7 @@
 \mbox{\hyperlink{class_reader_ab2ef48685e3aa59ab46add2da7f38cb6}{Reader}} (const char \texorpdfstring{$\ast$}{*}filename)
 \item 
 \mbox{\hyperlink{class_reader_a78089542fd27a0ac2df6702fffe8725c}{\texorpdfstring{$\sim$}{\string~}\+Reader}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destrutor da classe. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reader_a07ad5326873648c4d62a72eb664b4cff}{draw}} (\mbox{\hyperlink{class_sculptor}{Sculptor}} \&s)
 \item 
 int \mbox{\hyperlink{class_reader_a88f0528081e9b053507947a54974ca65}{get\+DimX}} ()
@@ -21,6 +26,9 @@ int \mbox{\hyperlink{class_reader_ab5d06d2b76a8a408d592c44c89fd51c7}{get\+DimZ}}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Classe que serve para ler um arquivo TXT com as instruções para gerar uma escultura 3D em um arquivo OFF. 
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_reader_ab2ef48685e3aa59ab46add2da7f38cb6}\index{Reader@{Reader}!Reader@{Reader}}
 \index{Reader@{Reader}!Reader@{Reader}}
@@ -28,11 +36,20 @@ int \mbox{\hyperlink{class_reader_ab5d06d2b76a8a408d592c44c89fd51c7}{get\+DimZ}}
 {\footnotesize\ttfamily \label{class_reader_ab2ef48685e3aa59ab46add2da7f38cb6} 
 Reader\+::\+Reader (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
 
+Construtor que abre o arquivo TXT de acordo com o nome do arquivo. 
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}filename} & Nome do arquivo TXT que será lido. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_reader_a78089542fd27a0ac2df6702fffe8725c}\index{Reader@{Reader}!````~Reader@{\texorpdfstring{$\sim$}{\string~}Reader}}
 \index{````~Reader@{\texorpdfstring{$\sim$}{\string~}Reader}!Reader@{Reader}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Reader()}{\string~Reader()}}
 {\footnotesize\ttfamily \label{class_reader_a78089542fd27a0ac2df6702fffe8725c} 
 Reader\+::\texorpdfstring{$\sim$}{\string~}\+Reader (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe. 
 
 
 
@@ -43,27 +60,41 @@ Reader\+::\texorpdfstring{$\sim$}{\string~}\+Reader (\begin{DoxyParamCaption}{}{
 {\footnotesize\ttfamily \label{class_reader_a07ad5326873648c4d62a72eb664b4cff} 
 void Reader\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sculptor}{Sculptor}} \&}]{s}{}\end{DoxyParamCaption})}
 
+Método para desenhar as figuras geométricas. 
+\begin{DoxyParams}{Parameters}
+{\em \&s} & \doxylink{class_sculptor}{Sculptor} com a figura geométrica específica. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_reader_a88f0528081e9b053507947a54974ca65}\index{Reader@{Reader}!getDimX@{getDimX}}
 \index{getDimX@{getDimX}!Reader@{Reader}}
 \doxysubsubsection{\texorpdfstring{getDimX()}{getDimX()}}
 {\footnotesize\ttfamily \label{class_reader_a88f0528081e9b053507947a54974ca65} 
 int Reader\+::get\+DimX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+Retorna o tamanho máximo da matriz em X. \begin{DoxyReturn}{Returns}
+dimX 
+\end{DoxyReturn}
 \Hypertarget{class_reader_a046258e51b0454a2505d6642def7ee6e}\index{Reader@{Reader}!getDimY@{getDimY}}
 \index{getDimY@{getDimY}!Reader@{Reader}}
 \doxysubsubsection{\texorpdfstring{getDimY()}{getDimY()}}
 {\footnotesize\ttfamily \label{class_reader_a046258e51b0454a2505d6642def7ee6e} 
 int Reader\+::get\+DimY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+Retorna o tamanho máximo da matriz em Y. \begin{DoxyReturn}{Returns}
+dimY 
+\end{DoxyReturn}
 \Hypertarget{class_reader_ab5d06d2b76a8a408d592c44c89fd51c7}\index{Reader@{Reader}!getDimZ@{getDimZ}}
 \index{getDimZ@{getDimZ}!Reader@{Reader}}
 \doxysubsubsection{\texorpdfstring{getDimZ()}{getDimZ()}}
 {\footnotesize\ttfamily \label{class_reader_ab5d06d2b76a8a408d592c44c89fd51c7} 
 int Reader\+::get\+DimZ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+Retorna o tamanho máximo da matriz em Z. \begin{DoxyReturn}{Returns}
+dimZ 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\mbox{\hyperlink{reader_8h}{reader.\+h}}\item 
-C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\mbox{\hyperlink{reader_8cpp}{reader.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\+Project\+\_\+\+Figura\+\_\+\+Geometrica/\mbox{\hyperlink{reader_8h}{reader.\+h}}\item 
+C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\+Project\+\_\+\+Figura\+\_\+\+Geometrica/\mbox{\hyperlink{reader_8cpp}{reader.\+cpp}}\end{DoxyCompactItemize}

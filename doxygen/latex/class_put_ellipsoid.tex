@@ -2,6 +2,11 @@
 \hypertarget{class_put_ellipsoid}{}\label{class_put_ellipsoid}\index{PutEllipsoid@{PutEllipsoid}}
 
 
+Sub-\/classe de {\ttfamily Figura\+Geométrica} para colocar um elipsóide com tamanho, cor e coordenadas especificados.  
+
+
+
+
 {\ttfamily \#include $<$putellipsoid.\+h$>$}
 
 Inheritance diagram for Put\+Ellipsoid\+:\begin{figure}[H]
@@ -21,36 +26,39 @@ void \mbox{\hyperlink{class_put_ellipsoid_a7563e424e3b7560c00c7cc2a3fc16425}{dra
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_figura_geometrica_a81d7c7efaea511e60a15f5a363138dd9}{Figura\+Geometrica}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe {\ttfamily \doxylink{class_figura_geometrica}{Figura\+Geometrica}}. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_figura_geometrica_ad13b9bccf1b14f6b9fbc662aad61ffd1}{\texorpdfstring{$\sim$}{\string~}\+Figura\+Geometrica}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destrutor virtual da classe {\ttfamily \doxylink{class_figura_geometrica}{Figura\+Geometrica}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{class_put_ellipsoid_a01c481bb5441245c5e8e879681899d56}{rx}}
-\item 
+\begin{DoxyCompactList}\small\item\em Raio do elipsóide em X. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_put_ellipsoid_a4f4274c00346b59e57154b23df712bd4}{ry}}
-\item 
+\begin{DoxyCompactList}\small\item\em Raio do elipsóide em Y. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_put_ellipsoid_aaf53d3f0093a1ab471f78da1c24a3606}{rz}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Raio do elipsóide em Z. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_figura_geometrica}{Figura\+Geometrica}}}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{class_figura_geometrica_ac7808b6b6074bf744ee597851651e9c5}{x}}
-\item 
+\begin{DoxyCompactList}\small\item\em Coordenada X da figura. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_figura_geometrica_ae5ddcf7439aa7274d7f818e49503402a}{y}}
-\item 
+\begin{DoxyCompactList}\small\item\em Coordenada Y da figura. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_figura_geometrica_aa121633ded95c66066a32ba51a118fbb}{z}}
-\item 
+\begin{DoxyCompactList}\small\item\em Coordenada Z da figura. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_figura_geometrica_a0a4f57efb1a6c525c8aeee34c92e7eab}{r}}
-\item 
+\begin{DoxyCompactList}\small\item\em Intensidade da cor vermelha, de 0 a 255. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_figura_geometrica_a51930549bcb90d016b824f10f95df355}{g}}
-\item 
+\begin{DoxyCompactList}\small\item\em Intensidade da cor verde, de 0 a 255. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_figura_geometrica_a25e5d6c21410103c25ec55c0117dac0d}{b}}
-\item 
+\begin{DoxyCompactList}\small\item\em Intensidade da cor azul, de 0 a 255. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_figura_geometrica_ae7c8a027fcec3c357265b90458a4d165}{a}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Transparência (alpha), onde 0.\+0 é totalmente transparente e 1.\+0 é totalmente opaco. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Sub-\/classe de {\ttfamily Figura\+Geométrica} para colocar um elipsóide com tamanho, cor e coordenadas especificados. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_put_ellipsoid_a4b7bd5b2a9a879f093acf58e2c19055b}\index{PutEllipsoid@{PutEllipsoid}!PutEllipsoid@{PutEllipsoid}}
@@ -59,6 +67,29 @@ float \mbox{\hyperlink{class_figura_geometrica_ae7c8a027fcec3c357265b90458a4d165
 {\footnotesize\ttfamily \label{class_put_ellipsoid_a4b7bd5b2a9a879f093acf58e2c19055b} 
 Put\+Ellipsoid\+::\+Put\+Ellipsoid (\begin{DoxyParamCaption}\item[{int}]{xcenter}{, }\item[{int}]{ycenter}{, }\item[{int}]{zcenter}{, }\item[{int}]{rx}{, }\item[{int}]{ry}{, }\item[{int}]{rz}{, }\item[{float}]{r}{, }\item[{float}]{g}{, }\item[{float}]{b}{, }\item[{float}]{a}{}\end{DoxyParamCaption})}
 
+Método para colocar um elipsóide com as coordenadas, cor e transparência especificados. 
+\begin{DoxyParams}{Parameters}
+{\em xcenter} & Coordenada X do ponto central. \\
+\hline
+{\em ycenter} & Coordenada Y do ponto central. \\
+\hline
+{\em xcenter} & Coordenada Y do ponto central. \\
+\hline
+{\em rx} & Raio do elipsóide em X. \\
+\hline
+{\em ry} & Raio do elipsóide em Y. \\
+\hline
+{\em rz} & Raio do elipsóide em Z. \\
+\hline
+{\em r} & Componente vermelho (Red) da cor, de 0 a 255. \\
+\hline
+{\em g} & Componente verde (Green) da cor, de 0 a 255. \\
+\hline
+{\em b} & Componente azul (Blue) da cor, de 0 a 255. \\
+\hline
+{\em a} & Componente de transparência (Alpha), de 0 a 1. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -68,6 +99,11 @@ Put\+Ellipsoid\+::\+Put\+Ellipsoid (\begin{DoxyParamCaption}\item[{int}]{xcenter
 {\footnotesize\ttfamily \label{class_put_ellipsoid_a7563e424e3b7560c00c7cc2a3fc16425} 
 void Put\+Ellipsoid\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sculptor}{Sculptor}} \&}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+Método para desenhar a figura geométrica. 
+\begin{DoxyParams}{Parameters}
+{\em \&s} & \doxylink{class_sculptor}{Sculptor} com a figura geométrica específica. \\
+\hline
+\end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{class_figura_geometrica_a140c20d043bc6bfb4952a367d8ed6c1c}{Figura\+Geometrica}}.
@@ -81,11 +117,19 @@ Implements \mbox{\hyperlink{class_figura_geometrica_a140c20d043bc6bfb4952a367d8e
 {\footnotesize\ttfamily \label{class_put_ellipsoid_a01c481bb5441245c5e8e879681899d56} 
 int Put\+Ellipsoid\+::rx\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+Raio do elipsóide em X. 
+
 \Hypertarget{class_put_ellipsoid_a4f4274c00346b59e57154b23df712bd4}\index{PutEllipsoid@{PutEllipsoid}!ry@{ry}}
 \index{ry@{ry}!PutEllipsoid@{PutEllipsoid}}
 \doxysubsubsection{\texorpdfstring{ry}{ry}}
 {\footnotesize\ttfamily \label{class_put_ellipsoid_a4f4274c00346b59e57154b23df712bd4} 
 int Put\+Ellipsoid\+::ry\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Raio do elipsóide em Y. 
 
 \Hypertarget{class_put_ellipsoid_aaf53d3f0093a1ab471f78da1c24a3606}\index{PutEllipsoid@{PutEllipsoid}!rz@{rz}}
 \index{rz@{rz}!PutEllipsoid@{PutEllipsoid}}
@@ -95,7 +139,11 @@ int Put\+Ellipsoid\+::rz\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
+Raio do elipsóide em Z. 
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\mbox{\hyperlink{putellipsoid_8h}{putellipsoid.\+h}}\item 
-C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\mbox{\hyperlink{putellipsoid_8cpp}{putellipsoid.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\+Project\+\_\+\+Figura\+\_\+\+Geometrica/\mbox{\hyperlink{putellipsoid_8h}{putellipsoid.\+h}}\item 
+C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\+Project\+\_\+\+Figura\+\_\+\+Geometrica/\mbox{\hyperlink{putellipsoid_8cpp}{putellipsoid.\+cpp}}\end{DoxyCompactItemize}

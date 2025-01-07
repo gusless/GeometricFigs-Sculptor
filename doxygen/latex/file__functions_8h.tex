@@ -1,5 +1,5 @@
-\doxysection{C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/file\+\_\+functions.h File Reference}
-\hypertarget{file__functions_8h}{}\label{file__functions_8h}\index{C:/Users/Gusto/Desktop/projects/figura\_geometrica/file\_functions.h@{C:/Users/Gusto/Desktop/projects/figura\_geometrica/file\_functions.h}}
+\doxysection{C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\+Project\+\_\+\+Figura\+\_\+\+Geometrica/file\+\_\+functions.h File Reference}
+\hypertarget{file__functions_8h}{}\label{file__functions_8h}\index{C:/Users/Gusto/Desktop/projects/figura\_geometrica/Project\_Figura\_Geometrica/file\_functions.h@{C:/Users/Gusto/Desktop/projects/figura\_geometrica/Project\_Figura\_Geometrica/file\_functions.h}}
 {\ttfamily \#include $<$filesystem$>$}\newline
 {\ttfamily \#include $<$fstream$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
@@ -9,9 +9,9 @@
 \begin{DoxyCompactItemize}
 \item 
 std\+::string \mbox{\hyperlink{file__functions_8h_acb29d59d0a567642a9ed109b77ede658}{find\+\_\+path}} (const std\+::string \&directory, const std\+::string \&filename)
-\item 
+\begin{DoxyCompactList}\small\item\em Procura um arquivo em um diretório e retorna seu caminho absoluto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{file__functions_8h_aae2622c61a0fcaaa002d65dc4c436906}{win\+\_\+open\+\_\+file}} (const char \texorpdfstring{$\ast$}{*}filename)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Abre um arquivo especificado pelo caminho fornecido e realiza verificações. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -21,9 +21,44 @@ void \mbox{\hyperlink{file__functions_8h_aae2622c61a0fcaaa002d65dc4c436906}{win\
 {\footnotesize\ttfamily \label{file__functions_8h_acb29d59d0a567642a9ed109b77ede658} 
 std\+::string find\+\_\+path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{directory}{, }\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})}
 
+
+
+Procura um arquivo em um diretório e retorna seu caminho absoluto. 
+
+Esta função busca recursivamente em um diretório especificado para localizar um arquivo com o nome fornecido. Se o arquivo for encontrado, o caminho absoluto é retornado. Caso contrário, uma string vazia é retornada.
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory} & O diretório raiz onde a busca será realizada. Deve ser um caminho válido. \\
+\hline
+{\em filename} & O nome do arquivo a ser localizado. Deve incluir apenas o nome e a extensão. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string O caminho absoluto do arquivo encontrado ou uma string vazia caso o arquivo não seja localizado.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::filesystem\+::filesystem\+\_\+error} & Caso ocorra algum erro ao acessar o sistema de arquivos.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyNote}{Note}
+Esta função utiliza a biblioteca {\ttfamily std\+::filesystem} para realizar operações no sistema de arquivos. 
+\end{DoxyNote}
 \Hypertarget{file__functions_8h_aae2622c61a0fcaaa002d65dc4c436906}\index{file\_functions.h@{file\_functions.h}!win\_open\_file@{win\_open\_file}}
 \index{win\_open\_file@{win\_open\_file}!file\_functions.h@{file\_functions.h}}
 \doxysubsubsection{\texorpdfstring{win\_open\_file()}{win\_open\_file()}}
 {\footnotesize\ttfamily \label{file__functions_8h_aae2622c61a0fcaaa002d65dc4c436906} 
 void win\+\_\+open\+\_\+file (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
 
+
+
+Abre um arquivo especificado pelo caminho fornecido e realiza verificações. 
+
+Esta função tenta localizar o arquivo especificado e verifica se ele existe. Caso o arquivo não seja encontrado, uma mensagem de erro será exibida.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & O caminho relativo ou absoluto do arquivo a ser aberto. Deve ser uma string terminada em caractere nulo ({\ttfamily const char\texorpdfstring{$\ast$}{*}}). \\
+\hline
+\end{DoxyParams}

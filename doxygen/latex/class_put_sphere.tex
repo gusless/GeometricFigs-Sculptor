@@ -2,6 +2,11 @@
 \hypertarget{class_put_sphere}{}\label{class_put_sphere}\index{PutSphere@{PutSphere}}
 
 
+Sub-\/classe de {\ttfamily Figura\+Geométrica} para colocar uma esfera com tamanho, cor e coordenadas especificados.  
+
+
+
+
 {\ttfamily \#include $<$putsphere.\+h$>$}
 
 Inheritance diagram for Put\+Sphere\+:\begin{figure}[H]
@@ -21,32 +26,35 @@ void \mbox{\hyperlink{class_put_sphere_a2c3b27fe4f8041fa6c487b636b2ab017}{draw}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_figura_geometrica_a81d7c7efaea511e60a15f5a363138dd9}{Figura\+Geometrica}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe {\ttfamily \doxylink{class_figura_geometrica}{Figura\+Geometrica}}. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_figura_geometrica_ad13b9bccf1b14f6b9fbc662aad61ffd1}{\texorpdfstring{$\sim$}{\string~}\+Figura\+Geometrica}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destrutor virtual da classe {\ttfamily \doxylink{class_figura_geometrica}{Figura\+Geometrica}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{class_put_sphere_a3593cd1d907b6d249d1be8accd8a04de}{radius}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Raio da esfera. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_figura_geometrica}{Figura\+Geometrica}}}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{class_figura_geometrica_ac7808b6b6074bf744ee597851651e9c5}{x}}
-\item 
+\begin{DoxyCompactList}\small\item\em Coordenada X da figura. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_figura_geometrica_ae5ddcf7439aa7274d7f818e49503402a}{y}}
-\item 
+\begin{DoxyCompactList}\small\item\em Coordenada Y da figura. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_figura_geometrica_aa121633ded95c66066a32ba51a118fbb}{z}}
-\item 
+\begin{DoxyCompactList}\small\item\em Coordenada Z da figura. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_figura_geometrica_a0a4f57efb1a6c525c8aeee34c92e7eab}{r}}
-\item 
+\begin{DoxyCompactList}\small\item\em Intensidade da cor vermelha, de 0 a 255. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_figura_geometrica_a51930549bcb90d016b824f10f95df355}{g}}
-\item 
+\begin{DoxyCompactList}\small\item\em Intensidade da cor verde, de 0 a 255. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_figura_geometrica_a25e5d6c21410103c25ec55c0117dac0d}{b}}
-\item 
+\begin{DoxyCompactList}\small\item\em Intensidade da cor azul, de 0 a 255. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_figura_geometrica_ae7c8a027fcec3c357265b90458a4d165}{a}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Transparência (alpha), onde 0.\+0 é totalmente transparente e 1.\+0 é totalmente opaco. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Sub-\/classe de {\ttfamily Figura\+Geométrica} para colocar uma esfera com tamanho, cor e coordenadas especificados. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_put_sphere_aad7d38e4406ef3cd77c6fd60c0b64e43}\index{PutSphere@{PutSphere}!PutSphere@{PutSphere}}
@@ -55,6 +63,25 @@ float \mbox{\hyperlink{class_figura_geometrica_ae7c8a027fcec3c357265b90458a4d165
 {\footnotesize\ttfamily \label{class_put_sphere_aad7d38e4406ef3cd77c6fd60c0b64e43} 
 Put\+Sphere\+::\+Put\+Sphere (\begin{DoxyParamCaption}\item[{int}]{xcenter}{, }\item[{int}]{ycenter}{, }\item[{int}]{zcenter}{, }\item[{int}]{radius}{, }\item[{float}]{r}{, }\item[{float}]{g}{, }\item[{float}]{b}{, }\item[{float}]{a}{}\end{DoxyParamCaption})}
 
+Método para colocar uma esfera com as coordenadas, cor e transparência especificados. 
+\begin{DoxyParams}{Parameters}
+{\em xcenter} & Coordenada X do ponto central. \\
+\hline
+{\em ycenter} & Coordenada Y do ponto central. \\
+\hline
+{\em xcenter} & Coordenada Y do ponto central. \\
+\hline
+{\em radius} & Raio da esfera. \\
+\hline
+{\em r} & Componente vermelho (Red) da cor, de 0 a 255. \\
+\hline
+{\em g} & Componente verde (Green) da cor, de 0 a 255. \\
+\hline
+{\em b} & Componente azul (Blue) da cor, de 0 a 255. \\
+\hline
+{\em a} & Componente de transparência (Alpha), de 0 a 1. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -64,6 +91,11 @@ Put\+Sphere\+::\+Put\+Sphere (\begin{DoxyParamCaption}\item[{int}]{xcenter}{, }\
 {\footnotesize\ttfamily \label{class_put_sphere_a2c3b27fe4f8041fa6c487b636b2ab017} 
 void Put\+Sphere\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sculptor}{Sculptor}} \&}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+Método para desenhar a figura geométrica. 
+\begin{DoxyParams}{Parameters}
+{\em \&s} & \doxylink{class_sculptor}{Sculptor} com a figura geométrica específica. \\
+\hline
+\end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{class_figura_geometrica_a140c20d043bc6bfb4952a367d8ed6c1c}{Figura\+Geometrica}}.
@@ -79,7 +111,11 @@ int Put\+Sphere\+::radius\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
+Raio da esfera. 
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\mbox{\hyperlink{putsphere_8h}{putsphere.\+h}}\item 
-C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\mbox{\hyperlink{putsphere_8cpp}{putsphere.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\+Project\+\_\+\+Figura\+\_\+\+Geometrica/\mbox{\hyperlink{putsphere_8h}{putsphere.\+h}}\item 
+C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\+Project\+\_\+\+Figura\+\_\+\+Geometrica/\mbox{\hyperlink{putsphere_8cpp}{putsphere.\+cpp}}\end{DoxyCompactItemize}

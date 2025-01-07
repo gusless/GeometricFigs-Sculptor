@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Sculptor - Figura Geométrica: C:/Users/Gusto/Desktop/projects/figura_geometrica/main.cpp File Reference</title>
+<title>Sculptor - Figura Geométrica: C:/Users/Gusto/Desktop/projects/figura_geometrica/Project_Figura_Geometrica/main.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,10 +24,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">Sculptor - Figura Geométrica<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Sculptor - Figura Geométrica
    </div>
-   <div id="projectbrief">Este projeto lê informações de um arquivo txt e transforma em um arquivo de visualização 3D .off</div>
+   <div id="projectbrief">Projeto desenvolvido em C++ com programação orientada a objetos, que converte arquivos TXT contendo uma série de instruções predefinidas em arquivos OFF, amplamente utilizados para representar objetos 3D. A aplicação foca na eficiência e na organização do código para garantir a fácil manutenção e extensibilidade.</div>
   </td>
  </tr>
  </tbody>
@@ -82,12 +83,16 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_989a97ab983c052720b72da2f3196295.html">Project_Figura_Geometrica</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">C:/Users/Gusto/Desktop/projects/figura_geometrica/main.cpp File Reference</div></div>
+  <div class="headertitle"><div class="title">main.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="reader_8h_source.html">reader.h</a>&quot;</code><br />
@@ -96,6 +101,7 @@ $(function(){ initResizable(false); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função principal do programa para gerar e manipular um arquivo OFF baseado em um arquivo TXT.  <br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -113,6 +119,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Função principal do programa para gerar e manipular um arquivo OFF baseado em um arquivo TXT. </p>
+<p>Esta função executa o fluxo principal do programa, realizando as seguintes operações:</p><ol type="1">
+<li>Localiza um arquivo TXT contendo instruções predefinidas para construção de objetos.</li>
+<li>Lê o conteúdo do arquivo TXT e inicializa um objeto <code><a class="el" href="class_sculptor.html" title="Classe base do programa, serve para colocar e retirar voxels, escolher a cor e escrever em um arquivo...">Sculptor</a></code> com base nas dimensões especificadas.</li>
+<li>Executa os comandos do arquivo TXT para desenhar o objeto no espaço 3D.</li>
+<li>Salva o resultado no formato OFF.</li>
+<li>Abre o arquivo OFF gerado para visualização ou processamento adicional.</li>
+</ol>
+<dl class="section return"><dt>Returns</dt><dd>int Retorna 0 se a execução foi bem-sucedida. </dd></dl>
+<p>&lt; Nome do arquivo de saída no formato OFF.</p>
+<p>&lt; Nome do arquivo TXT contendo instruções.</p>
 
 </div>
 </div>

@@ -24,10 +24,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">Sculptor - Figura Geométrica<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Sculptor - Figura Geométrica
    </div>
-   <div id="projectbrief">Este projeto lê informações de um arquivo txt e transforma em um arquivo de visualização 3D .off</div>
+   <div id="projectbrief">Projeto desenvolvido em C++ com programação orientada a objetos, que converte arquivos TXT contendo uma série de instruções predefinidas em arquivos OFF, amplamente utilizados para representar objetos 3D. A aplicação foca na eficiência e na organização do código para garantir a fácil manutenção e extensibilidade.</div>
   </td>
  </tr>
  </tbody>
@@ -93,13 +94,17 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 
+<p>Classe base do programa, serve para colocar e retirar voxels, escolher a cor e escrever em um arquivo OFF.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="sculptor_8h_source.html">sculptor.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac803d75599ad955b7c2693c613c8d5e5" id="r_ac803d75599ad955b7c2693c613c8d5e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac803d75599ad955b7c2693c613c8d5e5">Sculptor</a> (int _nx, int _ny, int <a class="el" href="#a33204e7df26a7ee4c7192381a24335d3">nz</a>)</td></tr>
-<tr class="separator:ac803d75599ad955b7c2693c613c8d5e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a014e3ef5517bf0e9d9e14486b6ac6433" id="r_a014e3ef5517bf0e9d9e14486b6ac6433"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a014e3ef5517bf0e9d9e14486b6ac6433">Sculptor</a> (int _nx, int _ny, int _nz)</td></tr>
+<tr class="separator:a014e3ef5517bf0e9d9e14486b6ac6433"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f159bf97458326f16d2e238e11be7ff" id="r_a8f159bf97458326f16d2e238e11be7ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f159bf97458326f16d2e238e11be7ff">~Sculptor</a> ()</td></tr>
+<tr class="memdesc:a8f159bf97458326f16d2e238e11be7ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da classe.  <br /></td></tr>
 <tr class="separator:a8f159bf97458326f16d2e238e11be7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4351c930a07887e96d4fdbf251a7867e" id="r_a4351c930a07887e96d4fdbf251a7867e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4351c930a07887e96d4fdbf251a7867e">setColor</a> (float <a class="el" href="#a3f5d2ec3b66d645019b8d81c810a1cd8">r</a>, float <a class="el" href="#a208c06af69a81a1568df4493868816f1">g</a>, float <a class="el" href="#a7aafd7305ea634252d8288b60536cd96">b</a>, float <a class="el" href="#a6fd0157dcf17582f0edd5fddf157604e">a</a>)</td></tr>
 <tr class="separator:a4351c930a07887e96d4fdbf251a7867e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -119,25 +124,35 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a4ca53a2f2fbf41ca42dfe729ebe693f1" id="r_a4ca53a2f2fbf41ca42dfe729ebe693f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_voxel.html">Voxel</a> ***&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ca53a2f2fbf41ca42dfe729ebe693f1">v</a></td></tr>
+<tr class="memdesc:a4ca53a2f2fbf41ca42dfe729ebe693f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matriz de voxels tridimensional que guarda o local de cada bloco da escultura.  <br /></td></tr>
 <tr class="separator:a4ca53a2f2fbf41ca42dfe729ebe693f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1e32f9042538419a3bc7b376f7813b8" id="r_ad1e32f9042538419a3bc7b376f7813b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1e32f9042538419a3bc7b376f7813b8">nx</a></td></tr>
+<tr class="memdesc:ad1e32f9042538419a3bc7b376f7813b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordenada X do ponto.  <br /></td></tr>
 <tr class="separator:ad1e32f9042538419a3bc7b376f7813b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ce2ff97ec94927928ab3f5ec4ba6761" id="r_a1ce2ff97ec94927928ab3f5ec4ba6761"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ce2ff97ec94927928ab3f5ec4ba6761">ny</a></td></tr>
+<tr class="memdesc:a1ce2ff97ec94927928ab3f5ec4ba6761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordenada Y do ponto.  <br /></td></tr>
 <tr class="separator:a1ce2ff97ec94927928ab3f5ec4ba6761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33204e7df26a7ee4c7192381a24335d3" id="r_a33204e7df26a7ee4c7192381a24335d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33204e7df26a7ee4c7192381a24335d3">nz</a></td></tr>
+<tr class="memdesc:a33204e7df26a7ee4c7192381a24335d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordenada Z do ponto.  <br /></td></tr>
 <tr class="separator:a33204e7df26a7ee4c7192381a24335d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f5d2ec3b66d645019b8d81c810a1cd8" id="r_a3f5d2ec3b66d645019b8d81c810a1cd8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f5d2ec3b66d645019b8d81c810a1cd8">r</a></td></tr>
+<tr class="memdesc:a3f5d2ec3b66d645019b8d81c810a1cd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente vermelho (Red) da cor, de 0 a 255.  <br /></td></tr>
 <tr class="separator:a3f5d2ec3b66d645019b8d81c810a1cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a208c06af69a81a1568df4493868816f1" id="r_a208c06af69a81a1568df4493868816f1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a208c06af69a81a1568df4493868816f1">g</a></td></tr>
+<tr class="memdesc:a208c06af69a81a1568df4493868816f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente verde (Green) da cor, de 0 a 255.  <br /></td></tr>
 <tr class="separator:a208c06af69a81a1568df4493868816f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aafd7305ea634252d8288b60536cd96" id="r_a7aafd7305ea634252d8288b60536cd96"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7aafd7305ea634252d8288b60536cd96">b</a></td></tr>
+<tr class="memdesc:a7aafd7305ea634252d8288b60536cd96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente azul (Blue) da cor, de 0 a 255.  <br /></td></tr>
 <tr class="separator:a7aafd7305ea634252d8288b60536cd96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fd0157dcf17582f0edd5fddf157604e" id="r_a6fd0157dcf17582f0edd5fddf157604e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fd0157dcf17582f0edd5fddf157604e">a</a></td></tr>
+<tr class="memdesc:a6fd0157dcf17582f0edd5fddf157604e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente de transparência (Alpha), de 0 a 1.  <br /></td></tr>
 <tr class="separator:a6fd0157dcf17582f0edd5fddf157604e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac803d75599ad955b7c2693c613c8d5e5" name="ac803d75599ad955b7c2693c613c8d5e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac803d75599ad955b7c2693c613c8d5e5">&#9670;&#160;</a></span>Sculptor()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Classe base do programa, serve para colocar e retirar voxels, escolher a cor e escrever em um arquivo OFF. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a014e3ef5517bf0e9d9e14486b6ac6433" name="a014e3ef5517bf0e9d9e14486b6ac6433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a014e3ef5517bf0e9d9e14486b6ac6433">&#9670;&#160;</a></span>Sculptor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,10 +170,18 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nz</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>_nz</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Construtor do programa, possui 3 parâmetros representando uma coordenada do plano tridimensional. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_nx</td><td>Coordenada X do ponto. </td></tr>
+    <tr><td class="paramname">_ny</td><td>Coordenada Y do ponto. </td></tr>
+    <tr><td class="paramname">_nx</td><td>Coordenada Y do ponto. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -176,6 +199,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Destrutor da classe. </p>
 
 </div>
 </div>
@@ -203,6 +228,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Método para apagar um <a class="el" href="struct_voxel.html" title="Struct que representa um Voxel, ou seja o menor bloco possível deste projeto, com dimensão 1x1x1.">Voxel</a> em uma coordenada do plano tridimensional. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Coordenada X do ponto. </td></tr>
+    <tr><td class="paramname">y</td><td>Coordenada Y do ponto. </td></tr>
+    <tr><td class="paramname">x</td><td>Coordenada Y do ponto. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -220,6 +253,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Retorna o eixo x da coordenada. </p><dl class="section return"><dt>Returns</dt><dd>nx </dd></dl>
 
 </div>
 </div>
@@ -237,6 +271,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Retorna o eixo y da coordenada. </p><dl class="section return"><dt>Returns</dt><dd>ny </dd></dl>
 
 </div>
 </div>
@@ -254,6 +289,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Retorna o eixo z da coordenada. </p><dl class="section return"><dt>Returns</dt><dd>nz </dd></dl>
 
 </div>
 </div>
@@ -280,6 +316,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Método para colocar um <a class="el" href="struct_voxel.html" title="Struct que representa um Voxel, ou seja o menor bloco possível deste projeto, com dimensão 1x1x1.">Voxel</a> em uma coordenada do plano tridimensional. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Coordenada X do ponto. </td></tr>
+    <tr><td class="paramname">y</td><td>Coordenada Y do ponto. </td></tr>
+    <tr><td class="paramname">x</td><td>Coordenada Y do ponto. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -311,6 +355,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Método para selecionar uma cor RGB, e sua transparencia <code>a</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>Componente vermelho (Red) da cor, de 0 a 255 </td></tr>
+    <tr><td class="paramname">g</td><td>Componente verde (Green) da cor, de 0 a 255 </td></tr>
+    <tr><td class="paramname">b</td><td>Componente azul (Blue) da cor, de 0 a 255 </td></tr>
+    <tr><td class="paramname">a</td><td>Componente de transparência (Alpha), de 0 a 1 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -328,6 +381,12 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Método para escrever a escultura em um arquivo OFF. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*filename</td><td>Nome do arquivo para escrita. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -344,6 +403,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Componente de transparência (Alpha), de 0 a 1. </p>
+
 </div>
 </div>
 <a id="a7aafd7305ea634252d8288b60536cd96" name="a7aafd7305ea634252d8288b60536cd96"></a>
@@ -357,6 +418,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Componente azul (Blue) da cor, de 0 a 255. </p>
 
 </div>
 </div>
@@ -372,6 +435,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Componente verde (Green) da cor, de 0 a 255. </p>
+
 </div>
 </div>
 <a id="ad1e32f9042538419a3bc7b376f7813b8" name="ad1e32f9042538419a3bc7b376f7813b8"></a>
@@ -385,6 +450,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Coordenada X do ponto. </p>
 
 </div>
 </div>
@@ -400,6 +467,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Coordenada Y do ponto. </p>
+
 </div>
 </div>
 <a id="a33204e7df26a7ee4c7192381a24335d3" name="a33204e7df26a7ee4c7192381a24335d3"></a>
@@ -413,6 +482,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Coordenada Z do ponto. </p>
 
 </div>
 </div>
@@ -428,6 +499,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Componente vermelho (Red) da cor, de 0 a 255. </p>
+
 </div>
 </div>
 <a id="a4ca53a2f2fbf41ca42dfe729ebe693f1" name="a4ca53a2f2fbf41ca42dfe729ebe693f1"></a>
@@ -442,11 +515,13 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Matriz de voxels tridimensional que guarda o local de cada bloco da escultura. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/Gusto/Desktop/projects/figura_geometrica/<a class="el" href="sculptor_8h_source.html">sculptor.h</a></li>
-<li>C:/Users/Gusto/Desktop/projects/figura_geometrica/<a class="el" href="sculptor_8cpp.html">sculptor.cpp</a></li>
+<li>C:/Users/Gusto/Desktop/projects/figura_geometrica/Project_Figura_Geometrica/<a class="el" href="sculptor_8h_source.html">sculptor.h</a></li>
+<li>C:/Users/Gusto/Desktop/projects/figura_geometrica/Project_Figura_Geometrica/<a class="el" href="sculptor_8cpp.html">sculptor.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

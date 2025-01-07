@@ -24,10 +24,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">Sculptor - Figura Geométrica<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Sculptor - Figura Geométrica
    </div>
-   <div id="projectbrief">Este projeto lê informações de um arquivo txt e transforma em um arquivo de visualização 3D .off</div>
+   <div id="projectbrief">Projeto desenvolvido em C++ com programação orientada a objetos, que converte arquivos TXT contendo uma série de instruções predefinidas em arquivos OFF, amplamente utilizados para representar objetos 3D. A aplicação foca na eficiência e na organização do código para garantir a fácil manutenção e extensibilidade.</div>
   </td>
  </tr>
  </tbody>
@@ -92,6 +93,9 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 
+<p>Classe que serve para ler um arquivo TXT com as instruções para gerar uma escultura 3D em um arquivo OFF.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="reader_8h_source.html">reader.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -99,6 +103,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab2ef48685e3aa59ab46add2da7f38cb6" id="r_ab2ef48685e3aa59ab46add2da7f38cb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2ef48685e3aa59ab46add2da7f38cb6">Reader</a> (const char *filename)</td></tr>
 <tr class="separator:ab2ef48685e3aa59ab46add2da7f38cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78089542fd27a0ac2df6702fffe8725c" id="r_a78089542fd27a0ac2df6702fffe8725c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78089542fd27a0ac2df6702fffe8725c">~Reader</a> ()</td></tr>
+<tr class="memdesc:a78089542fd27a0ac2df6702fffe8725c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da classe.  <br /></td></tr>
 <tr class="separator:a78089542fd27a0ac2df6702fffe8725c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07ad5326873648c4d62a72eb664b4cff" id="r_a07ad5326873648c4d62a72eb664b4cff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07ad5326873648c4d62a72eb664b4cff">draw</a> (<a class="el" href="class_sculptor.html">Sculptor</a> &amp;s)</td></tr>
 <tr class="separator:a07ad5326873648c4d62a72eb664b4cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,7 +114,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab5d06d2b76a8a408d592c44c89fd51c7" id="r_ab5d06d2b76a8a408d592c44c89fd51c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5d06d2b76a8a408d592c44c89fd51c7">getDimZ</a> ()</td></tr>
 <tr class="separator:ab5d06d2b76a8a408d592c44c89fd51c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Classe que serve para ler um arquivo TXT com as instruções para gerar uma escultura 3D em um arquivo OFF. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab2ef48685e3aa59ab46add2da7f38cb6" name="ab2ef48685e3aa59ab46add2da7f38cb6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab2ef48685e3aa59ab46add2da7f38cb6">&#9670;&#160;</a></span>Reader()</h2>
 
@@ -124,6 +131,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Construtor que abre o arquivo TXT de acordo com o nome do arquivo. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*filename</td><td>Nome do arquivo TXT que será lido. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -142,6 +155,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Destrutor da classe. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -159,6 +174,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Método para desenhar as figuras geométricas. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&amp;s</td><td><a class="el" href="class_sculptor.html" title="Classe base do programa, serve para colocar e retirar voxels, escolher a cor e escrever em um arquivo...">Sculptor</a> com a figura geométrica específica. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -176,6 +197,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Retorna o tamanho máximo da matriz em X. </p><dl class="section return"><dt>Returns</dt><dd>dimX </dd></dl>
 
 </div>
 </div>
@@ -193,6 +215,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Retorna o tamanho máximo da matriz em Y. </p><dl class="section return"><dt>Returns</dt><dd>dimY </dd></dl>
 
 </div>
 </div>
@@ -210,12 +233,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Retorna o tamanho máximo da matriz em Z. </p><dl class="section return"><dt>Returns</dt><dd>dimZ </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/Gusto/Desktop/projects/figura_geometrica/<a class="el" href="reader_8h_source.html">reader.h</a></li>
-<li>C:/Users/Gusto/Desktop/projects/figura_geometrica/<a class="el" href="reader_8cpp.html">reader.cpp</a></li>
+<li>C:/Users/Gusto/Desktop/projects/figura_geometrica/Project_Figura_Geometrica/<a class="el" href="reader_8h_source.html">reader.h</a></li>
+<li>C:/Users/Gusto/Desktop/projects/figura_geometrica/Project_Figura_Geometrica/<a class="el" href="reader_8cpp.html">reader.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

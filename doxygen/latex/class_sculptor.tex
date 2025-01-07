@@ -2,15 +2,20 @@
 \hypertarget{class_sculptor}{}\label{class_sculptor}\index{Sculptor@{Sculptor}}
 
 
+Classe base do programa, serve para colocar e retirar voxels, escolher a cor e escrever em um arquivo OFF.  
+
+
+
+
 {\ttfamily \#include $<$sculptor.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_sculptor_ac803d75599ad955b7c2693c613c8d5e5}{Sculptor}} (int \+\_\+nx, int \+\_\+ny, int \mbox{\hyperlink{class_sculptor_a33204e7df26a7ee4c7192381a24335d3}{nz}})
+\mbox{\hyperlink{class_sculptor_a014e3ef5517bf0e9d9e14486b6ac6433}{Sculptor}} (int \+\_\+nx, int \+\_\+ny, int \+\_\+nz)
 \item 
 \mbox{\hyperlink{class_sculptor_a8f159bf97458326f16d2e238e11be7ff}{\texorpdfstring{$\sim$}{\string~}\+Sculptor}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destrutor da classe. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_sculptor_a4351c930a07887e96d4fdbf251a7867e}{set\+Color}} (float \mbox{\hyperlink{class_sculptor_a3f5d2ec3b66d645019b8d81c810a1cd8}{r}}, float \mbox{\hyperlink{class_sculptor_a208c06af69a81a1568df4493868816f1}{g}}, float \mbox{\hyperlink{class_sculptor_a7aafd7305ea634252d8288b60536cd96}{b}}, float \mbox{\hyperlink{class_sculptor_a6fd0157dcf17582f0edd5fddf157604e}{a}})
 \item 
 void \mbox{\hyperlink{class_sculptor_a4bdea3048b419d58e93074060eaa7b52}{put\+Voxel}} (int x, int y, int z)
@@ -29,35 +34,51 @@ int \mbox{\hyperlink{class_sculptor_a173c8acbff2f0309aa10835d97f47259}{getZ}} ()
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{struct_voxel}{Voxel}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sculptor_a4ca53a2f2fbf41ca42dfe729ebe693f1}{v}}
-\item 
+\begin{DoxyCompactList}\small\item\em Matriz de voxels tridimensional que guarda o local de cada bloco da escultura. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_sculptor_ad1e32f9042538419a3bc7b376f7813b8}{nx}}
-\item 
+\begin{DoxyCompactList}\small\item\em Coordenada X do ponto. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_sculptor_a1ce2ff97ec94927928ab3f5ec4ba6761}{ny}}
-\item 
+\begin{DoxyCompactList}\small\item\em Coordenada Y do ponto. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_sculptor_a33204e7df26a7ee4c7192381a24335d3}{nz}}
-\item 
+\begin{DoxyCompactList}\small\item\em Coordenada Z do ponto. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_sculptor_a3f5d2ec3b66d645019b8d81c810a1cd8}{r}}
-\item 
+\begin{DoxyCompactList}\small\item\em Componente vermelho (Red) da cor, de 0 a 255. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_sculptor_a208c06af69a81a1568df4493868816f1}{g}}
-\item 
+\begin{DoxyCompactList}\small\item\em Componente verde (Green) da cor, de 0 a 255. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_sculptor_a7aafd7305ea634252d8288b60536cd96}{b}}
-\item 
+\begin{DoxyCompactList}\small\item\em Componente azul (Blue) da cor, de 0 a 255. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_sculptor_a6fd0157dcf17582f0edd5fddf157604e}{a}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Componente de transparência (Alpha), de 0 a 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Classe base do programa, serve para colocar e retirar voxels, escolher a cor e escrever em um arquivo OFF. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_sculptor_ac803d75599ad955b7c2693c613c8d5e5}\index{Sculptor@{Sculptor}!Sculptor@{Sculptor}}
+\Hypertarget{class_sculptor_a014e3ef5517bf0e9d9e14486b6ac6433}\index{Sculptor@{Sculptor}!Sculptor@{Sculptor}}
 \index{Sculptor@{Sculptor}!Sculptor@{Sculptor}}
 \doxysubsubsection{\texorpdfstring{Sculptor()}{Sculptor()}}
-{\footnotesize\ttfamily \label{class_sculptor_ac803d75599ad955b7c2693c613c8d5e5} 
-Sculptor\+::\+Sculptor (\begin{DoxyParamCaption}\item[{int}]{\+\_\+nx}{, }\item[{int}]{\+\_\+ny}{, }\item[{int}]{nz}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_sculptor_a014e3ef5517bf0e9d9e14486b6ac6433} 
+Sculptor\+::\+Sculptor (\begin{DoxyParamCaption}\item[{int}]{\+\_\+nx}{, }\item[{int}]{\+\_\+ny}{, }\item[{int}]{\+\_\+nz}{}\end{DoxyParamCaption})}
 
+Construtor do programa, possui 3 parâmetros representando uma coordenada do plano tridimensional. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+nx} & Coordenada X do ponto. \\
+\hline
+{\em \+\_\+ny} & Coordenada Y do ponto. \\
+\hline
+{\em \+\_\+nx} & Coordenada Y do ponto. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_sculptor_a8f159bf97458326f16d2e238e11be7ff}\index{Sculptor@{Sculptor}!````~Sculptor@{\texorpdfstring{$\sim$}{\string~}Sculptor}}
 \index{````~Sculptor@{\texorpdfstring{$\sim$}{\string~}Sculptor}!Sculptor@{Sculptor}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Sculptor()}{\string~Sculptor()}}
 {\footnotesize\ttfamily \label{class_sculptor_a8f159bf97458326f16d2e238e11be7ff} 
 Sculptor\+::\texorpdfstring{$\sim$}{\string~}\+Sculptor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe. 
 
 
 
@@ -68,42 +89,85 @@ Sculptor\+::\texorpdfstring{$\sim$}{\string~}\+Sculptor (\begin{DoxyParamCaption
 {\footnotesize\ttfamily \label{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c} 
 void Sculptor\+::cut\+Voxel (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{z}{}\end{DoxyParamCaption})}
 
+Método para apagar um \doxylink{struct_voxel}{Voxel} em uma coordenada do plano tridimensional. 
+\begin{DoxyParams}{Parameters}
+{\em x} & Coordenada X do ponto. \\
+\hline
+{\em y} & Coordenada Y do ponto. \\
+\hline
+{\em x} & Coordenada Y do ponto. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_sculptor_a09c163c74abfdf3caad6022002346bd4}\index{Sculptor@{Sculptor}!getX@{getX}}
 \index{getX@{getX}!Sculptor@{Sculptor}}
 \doxysubsubsection{\texorpdfstring{getX()}{getX()}}
 {\footnotesize\ttfamily \label{class_sculptor_a09c163c74abfdf3caad6022002346bd4} 
 int Sculptor\+::getX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+Retorna o eixo x da coordenada. \begin{DoxyReturn}{Returns}
+nx 
+\end{DoxyReturn}
 \Hypertarget{class_sculptor_a9f91148548f8a40df5ef708982ee1f7d}\index{Sculptor@{Sculptor}!getY@{getY}}
 \index{getY@{getY}!Sculptor@{Sculptor}}
 \doxysubsubsection{\texorpdfstring{getY()}{getY()}}
 {\footnotesize\ttfamily \label{class_sculptor_a9f91148548f8a40df5ef708982ee1f7d} 
 int Sculptor\+::getY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+Retorna o eixo y da coordenada. \begin{DoxyReturn}{Returns}
+ny 
+\end{DoxyReturn}
 \Hypertarget{class_sculptor_a173c8acbff2f0309aa10835d97f47259}\index{Sculptor@{Sculptor}!getZ@{getZ}}
 \index{getZ@{getZ}!Sculptor@{Sculptor}}
 \doxysubsubsection{\texorpdfstring{getZ()}{getZ()}}
 {\footnotesize\ttfamily \label{class_sculptor_a173c8acbff2f0309aa10835d97f47259} 
 int Sculptor\+::getZ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+Retorna o eixo z da coordenada. \begin{DoxyReturn}{Returns}
+nz 
+\end{DoxyReturn}
 \Hypertarget{class_sculptor_a4bdea3048b419d58e93074060eaa7b52}\index{Sculptor@{Sculptor}!putVoxel@{putVoxel}}
 \index{putVoxel@{putVoxel}!Sculptor@{Sculptor}}
 \doxysubsubsection{\texorpdfstring{putVoxel()}{putVoxel()}}
 {\footnotesize\ttfamily \label{class_sculptor_a4bdea3048b419d58e93074060eaa7b52} 
 void Sculptor\+::put\+Voxel (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{z}{}\end{DoxyParamCaption})}
 
+Método para colocar um \doxylink{struct_voxel}{Voxel} em uma coordenada do plano tridimensional. 
+\begin{DoxyParams}{Parameters}
+{\em x} & Coordenada X do ponto. \\
+\hline
+{\em y} & Coordenada Y do ponto. \\
+\hline
+{\em x} & Coordenada Y do ponto. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_sculptor_a4351c930a07887e96d4fdbf251a7867e}\index{Sculptor@{Sculptor}!setColor@{setColor}}
 \index{setColor@{setColor}!Sculptor@{Sculptor}}
 \doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
 {\footnotesize\ttfamily \label{class_sculptor_a4351c930a07887e96d4fdbf251a7867e} 
 void Sculptor\+::set\+Color (\begin{DoxyParamCaption}\item[{float}]{r}{, }\item[{float}]{g}{, }\item[{float}]{b}{, }\item[{float}]{a}{}\end{DoxyParamCaption})}
 
+Método para selecionar uma cor RGB, e sua transparencia {\ttfamily a}. 
+\begin{DoxyParams}{Parameters}
+{\em r} & Componente vermelho (Red) da cor, de 0 a 255 \\
+\hline
+{\em g} & Componente verde (Green) da cor, de 0 a 255 \\
+\hline
+{\em b} & Componente azul (Blue) da cor, de 0 a 255 \\
+\hline
+{\em a} & Componente de transparência (Alpha), de 0 a 1 \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_sculptor_a58cb72d22001a5034f15383ca983830c}\index{Sculptor@{Sculptor}!writeOFF@{writeOFF}}
 \index{writeOFF@{writeOFF}!Sculptor@{Sculptor}}
 \doxysubsubsection{\texorpdfstring{writeOFF()}{writeOFF()}}
 {\footnotesize\ttfamily \label{class_sculptor_a58cb72d22001a5034f15383ca983830c} 
 void Sculptor\+::write\+OFF (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
 
+Método para escrever a escultura em um arquivo OFF. 
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}filename} & Nome do arquivo para escrita. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Data Documentation}
@@ -113,11 +177,19 @@ void Sculptor\+::write\+OFF (\begin{DoxyParamCaption}\item[{const char \texorpdf
 {\footnotesize\ttfamily \label{class_sculptor_a6fd0157dcf17582f0edd5fddf157604e} 
 float Sculptor\+::a}
 
+
+
+Componente de transparência (Alpha), de 0 a 1. 
+
 \Hypertarget{class_sculptor_a7aafd7305ea634252d8288b60536cd96}\index{Sculptor@{Sculptor}!b@{b}}
 \index{b@{b}!Sculptor@{Sculptor}}
 \doxysubsubsection{\texorpdfstring{b}{b}}
 {\footnotesize\ttfamily \label{class_sculptor_a7aafd7305ea634252d8288b60536cd96} 
 float Sculptor\+::b}
+
+
+
+Componente azul (Blue) da cor, de 0 a 255. 
 
 \Hypertarget{class_sculptor_a208c06af69a81a1568df4493868816f1}\index{Sculptor@{Sculptor}!g@{g}}
 \index{g@{g}!Sculptor@{Sculptor}}
@@ -125,11 +197,19 @@ float Sculptor\+::b}
 {\footnotesize\ttfamily \label{class_sculptor_a208c06af69a81a1568df4493868816f1} 
 float Sculptor\+::g}
 
+
+
+Componente verde (Green) da cor, de 0 a 255. 
+
 \Hypertarget{class_sculptor_ad1e32f9042538419a3bc7b376f7813b8}\index{Sculptor@{Sculptor}!nx@{nx}}
 \index{nx@{nx}!Sculptor@{Sculptor}}
 \doxysubsubsection{\texorpdfstring{nx}{nx}}
 {\footnotesize\ttfamily \label{class_sculptor_ad1e32f9042538419a3bc7b376f7813b8} 
 int Sculptor\+::nx}
+
+
+
+Coordenada X do ponto. 
 
 \Hypertarget{class_sculptor_a1ce2ff97ec94927928ab3f5ec4ba6761}\index{Sculptor@{Sculptor}!ny@{ny}}
 \index{ny@{ny}!Sculptor@{Sculptor}}
@@ -137,17 +217,29 @@ int Sculptor\+::nx}
 {\footnotesize\ttfamily \label{class_sculptor_a1ce2ff97ec94927928ab3f5ec4ba6761} 
 int Sculptor\+::ny}
 
+
+
+Coordenada Y do ponto. 
+
 \Hypertarget{class_sculptor_a33204e7df26a7ee4c7192381a24335d3}\index{Sculptor@{Sculptor}!nz@{nz}}
 \index{nz@{nz}!Sculptor@{Sculptor}}
 \doxysubsubsection{\texorpdfstring{nz}{nz}}
 {\footnotesize\ttfamily \label{class_sculptor_a33204e7df26a7ee4c7192381a24335d3} 
 int Sculptor\+::nz}
 
+
+
+Coordenada Z do ponto. 
+
 \Hypertarget{class_sculptor_a3f5d2ec3b66d645019b8d81c810a1cd8}\index{Sculptor@{Sculptor}!r@{r}}
 \index{r@{r}!Sculptor@{Sculptor}}
 \doxysubsubsection{\texorpdfstring{r}{r}}
 {\footnotesize\ttfamily \label{class_sculptor_a3f5d2ec3b66d645019b8d81c810a1cd8} 
 float Sculptor\+::r}
+
+
+
+Componente vermelho (Red) da cor, de 0 a 255. 
 
 \Hypertarget{class_sculptor_a4ca53a2f2fbf41ca42dfe729ebe693f1}\index{Sculptor@{Sculptor}!v@{v}}
 \index{v@{v}!Sculptor@{Sculptor}}
@@ -157,7 +249,11 @@ float Sculptor\+::r}
 
 
 
+Matriz de voxels tridimensional que guarda o local de cada bloco da escultura. 
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\mbox{\hyperlink{sculptor_8h}{sculptor.\+h}}\item 
-C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\mbox{\hyperlink{sculptor_8cpp}{sculptor.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\+Project\+\_\+\+Figura\+\_\+\+Geometrica/\mbox{\hyperlink{sculptor_8h}{sculptor.\+h}}\item 
+C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\+Project\+\_\+\+Figura\+\_\+\+Geometrica/\mbox{\hyperlink{sculptor_8cpp}{sculptor.\+cpp}}\end{DoxyCompactItemize}

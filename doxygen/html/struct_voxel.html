@@ -24,10 +24,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">Sculptor - Figura Geométrica<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Sculptor - Figura Geométrica
    </div>
-   <div id="projectbrief">Este projeto lê informações de um arquivo txt e transforma em um arquivo de visualização 3D .off</div>
+   <div id="projectbrief">Projeto desenvolvido em C++ com programação orientada a objetos, que converte arquivos TXT contendo uma série de instruções predefinidas em arquivos OFF, amplamente utilizados para representar objetos 3D. A aplicação foca na eficiência e na organização do código para garantir a fácil manutenção e extensibilidade.</div>
   </td>
  </tr>
  </tbody>
@@ -92,22 +93,32 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 
+<p>Struct que representa um <a class="el" href="struct_voxel.html" title="Struct que representa um Voxel, ou seja o menor bloco possível deste projeto, com dimensão 1x1x1.">Voxel</a>, ou seja o menor bloco possível deste projeto, com dimensão 1x1x1.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="voxel_8h_source.html">voxel.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a06872ec79b836120b551a848968c0f1b" id="r_a06872ec79b836120b551a848968c0f1b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06872ec79b836120b551a848968c0f1b">r</a></td></tr>
+<tr class="memdesc:a06872ec79b836120b551a848968c0f1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente vermelho (Red) da cor, de 0 a 255.  <br /></td></tr>
 <tr class="separator:a06872ec79b836120b551a848968c0f1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27c0da1ed2ff430401d23ff171612a73" id="r_a27c0da1ed2ff430401d23ff171612a73"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27c0da1ed2ff430401d23ff171612a73">g</a></td></tr>
+<tr class="memdesc:a27c0da1ed2ff430401d23ff171612a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente verde (Green) da cor, de 0 a 255.  <br /></td></tr>
 <tr class="separator:a27c0da1ed2ff430401d23ff171612a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cd8432b1d7d0fd8b79e0fc7d10373a8" id="r_a5cd8432b1d7d0fd8b79e0fc7d10373a8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cd8432b1d7d0fd8b79e0fc7d10373a8">b</a></td></tr>
+<tr class="memdesc:a5cd8432b1d7d0fd8b79e0fc7d10373a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente azul (Blue) da cor, de 0 a 255.  <br /></td></tr>
 <tr class="separator:a5cd8432b1d7d0fd8b79e0fc7d10373a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ce2579eb0a9f09a07112ce7498a638e" id="r_a3ce2579eb0a9f09a07112ce7498a638e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ce2579eb0a9f09a07112ce7498a638e">a</a></td></tr>
+<tr class="memdesc:a3ce2579eb0a9f09a07112ce7498a638e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente de transparência (Alpha), de 0 a 1.  <br /></td></tr>
 <tr class="separator:a3ce2579eb0a9f09a07112ce7498a638e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7daa6a3073416618d1365e0fc38f152f" id="r_a7daa6a3073416618d1365e0fc38f152f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7daa6a3073416618d1365e0fc38f152f">show</a></td></tr>
+<tr class="memdesc:a7daa6a3073416618d1365e0fc38f152f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente que representa se o bloco está posicionado ou não.  <br /></td></tr>
 <tr class="separator:a7daa6a3073416618d1365e0fc38f152f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Struct que representa um <a class="el" href="struct_voxel.html" title="Struct que representa um Voxel, ou seja o menor bloco possível deste projeto, com dimensão 1x1x1.">Voxel</a>, ou seja o menor bloco possível deste projeto, com dimensão 1x1x1. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a3ce2579eb0a9f09a07112ce7498a638e" name="a3ce2579eb0a9f09a07112ce7498a638e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ce2579eb0a9f09a07112ce7498a638e">&#9670;&#160;</a></span>a</h2>
 
@@ -119,6 +130,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Componente de transparência (Alpha), de 0 a 1. </p>
 
 </div>
 </div>
@@ -134,6 +147,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Componente azul (Blue) da cor, de 0 a 255. </p>
+
 </div>
 </div>
 <a id="a27c0da1ed2ff430401d23ff171612a73" name="a27c0da1ed2ff430401d23ff171612a73"></a>
@@ -147,6 +162,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Componente verde (Green) da cor, de 0 a 255. </p>
 
 </div>
 </div>
@@ -162,6 +179,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Componente vermelho (Red) da cor, de 0 a 255. </p>
+
 </div>
 </div>
 <a id="a7daa6a3073416618d1365e0fc38f152f" name="a7daa6a3073416618d1365e0fc38f152f"></a>
@@ -176,10 +195,12 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Componente que representa se o bloco está posicionado ou não. </p>
+
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/Users/Gusto/Desktop/projects/figura_geometrica/<a class="el" href="voxel_8h_source.html">voxel.h</a></li>
+<li>C:/Users/Gusto/Desktop/projects/figura_geometrica/Project_Figura_Geometrica/<a class="el" href="voxel_8h_source.html">voxel.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

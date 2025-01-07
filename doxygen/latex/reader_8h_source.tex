@@ -1,22 +1,33 @@
-\doxysection{C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/reader.h}
-\hypertarget{reader_8h_source}{}\label{reader_8h_source}\mbox{\hyperlink{reader_8h}{Go to the documentation of this file.}}
+\doxysection{reader.\+h}
+\hypertarget{reader_8h_source}{}\label{reader_8h_source}\index{C:/Users/Gusto/Desktop/projects/figura\_geometrica/Project\_Figura\_Geometrica/reader.h@{C:/Users/Gusto/Desktop/projects/figura\_geometrica/Project\_Figura\_Geometrica/reader.h}}
+\mbox{\hyperlink{reader_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ READER\_H}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ READER\_H}}
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{figurageometrica_8h}{figurageometrica.h}}"{}}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_reader}{Reader}}\{}
-\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{int}\ dimX,\ dimY,\ dimZ;}
-\DoxyCodeLine{00008\ \ \ \ \ std::vector<FiguraGeometrica*>\ figs;}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_reader_ab2ef48685e3aa59ab46add2da7f38cb6}{Reader}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename);}
-\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_reader_a78089542fd27a0ac2df6702fffe8725c}{\string~Reader}}();}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reader_a07ad5326873648c4d62a72eb664b4cff}{draw}}(\mbox{\hyperlink{class_sculptor}{Sculptor}}\ \&s);}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_reader_a88f0528081e9b053507947a54974ca65}{getDimX}}();\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_reader_a046258e51b0454a2505d6642def7ee6e}{getDimY}}();\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_reader_ab5d06d2b76a8a408d592c44c89fd51c7}{getDimZ}}();}
-\DoxyCodeLine{00015\ \};}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ READER\_H}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_reader}{Reader}}\{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{int}\ dimX,\ }
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ dimY,\ }
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ dimZ;\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ std::vector<FiguraGeometrica*>\ figs;\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_reader_ab2ef48685e3aa59ab46add2da7f38cb6}{Reader}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_reader_a78089542fd27a0ac2df6702fffe8725c}{\string~Reader}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reader_a07ad5326873648c4d62a72eb664b4cff}{draw}}(\mbox{\hyperlink{class_sculptor}{Sculptor}}\ \&s);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_reader_a88f0528081e9b053507947a54974ca65}{getDimX}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_reader_a046258e51b0454a2505d6642def7ee6e}{getDimY}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_reader_ab5d06d2b76a8a408d592c44c89fd51c7}{getDimZ}}();}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ READER\_H}}
 
 \end{DoxyCode}

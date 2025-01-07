@@ -2,6 +2,11 @@
 \hypertarget{class_cut_ellipsoid}{}\label{class_cut_ellipsoid}\index{CutEllipsoid@{CutEllipsoid}}
 
 
+Sub-\/classe de {\ttfamily Figura\+Geométrica} para apagar um elipsóide com as coordenadas especificadas.  
+
+
+
+
 {\ttfamily \#include $<$cutellipsoid.\+h$>$}
 
 Inheritance diagram for Cut\+Ellipsoid\+:\begin{figure}[H]
@@ -21,36 +26,39 @@ void \mbox{\hyperlink{class_cut_ellipsoid_a3888e48949c6f89e1fe14bc3f95716fa}{dra
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_figura_geometrica_a81d7c7efaea511e60a15f5a363138dd9}{Figura\+Geometrica}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe {\ttfamily \doxylink{class_figura_geometrica}{Figura\+Geometrica}}. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_figura_geometrica_ad13b9bccf1b14f6b9fbc662aad61ffd1}{\texorpdfstring{$\sim$}{\string~}\+Figura\+Geometrica}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destrutor virtual da classe {\ttfamily \doxylink{class_figura_geometrica}{Figura\+Geometrica}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{class_cut_ellipsoid_a5d2ee1baae0313b76621fb57c317c2f0}{rx}}
-\item 
+\begin{DoxyCompactList}\small\item\em Raio do elipsóide em X. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_cut_ellipsoid_a05d0bb0ec91e61d53d0b952bb8d733f2}{ry}}
-\item 
+\begin{DoxyCompactList}\small\item\em Raio do elipsóide em Y. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_cut_ellipsoid_aa47df0d08db6ae887e77b13ef142ade1}{rz}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Raio do elipsóide em Z. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_figura_geometrica}{Figura\+Geometrica}}}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{class_figura_geometrica_ac7808b6b6074bf744ee597851651e9c5}{x}}
-\item 
+\begin{DoxyCompactList}\small\item\em Coordenada X da figura. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_figura_geometrica_ae5ddcf7439aa7274d7f818e49503402a}{y}}
-\item 
+\begin{DoxyCompactList}\small\item\em Coordenada Y da figura. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_figura_geometrica_aa121633ded95c66066a32ba51a118fbb}{z}}
-\item 
+\begin{DoxyCompactList}\small\item\em Coordenada Z da figura. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_figura_geometrica_a0a4f57efb1a6c525c8aeee34c92e7eab}{r}}
-\item 
+\begin{DoxyCompactList}\small\item\em Intensidade da cor vermelha, de 0 a 255. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_figura_geometrica_a51930549bcb90d016b824f10f95df355}{g}}
-\item 
+\begin{DoxyCompactList}\small\item\em Intensidade da cor verde, de 0 a 255. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_figura_geometrica_a25e5d6c21410103c25ec55c0117dac0d}{b}}
-\item 
+\begin{DoxyCompactList}\small\item\em Intensidade da cor azul, de 0 a 255. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_figura_geometrica_ae7c8a027fcec3c357265b90458a4d165}{a}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Transparência (alpha), onde 0.\+0 é totalmente transparente e 1.\+0 é totalmente opaco. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Sub-\/classe de {\ttfamily Figura\+Geométrica} para apagar um elipsóide com as coordenadas especificadas. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_cut_ellipsoid_a341bcf037ada67c4727857b467d7788b}\index{CutEllipsoid@{CutEllipsoid}!CutEllipsoid@{CutEllipsoid}}
@@ -59,6 +67,21 @@ float \mbox{\hyperlink{class_figura_geometrica_ae7c8a027fcec3c357265b90458a4d165
 {\footnotesize\ttfamily \label{class_cut_ellipsoid_a341bcf037ada67c4727857b467d7788b} 
 Cut\+Ellipsoid\+::\+Cut\+Ellipsoid (\begin{DoxyParamCaption}\item[{int}]{xcenter}{, }\item[{int}]{ycenter}{, }\item[{int}]{zcenter}{, }\item[{int}]{rx}{, }\item[{int}]{ry}{, }\item[{int}]{rz}{}\end{DoxyParamCaption})}
 
+Método para apagar um elipsóide com as coordenadas especificados. 
+\begin{DoxyParams}{Parameters}
+{\em xcenter} & Coordenada X do ponto central. \\
+\hline
+{\em ycenter} & Coordenada Y do ponto central. \\
+\hline
+{\em xcenter} & Coordenada Y do ponto central. \\
+\hline
+{\em rx} & Raio do elipsóide em X. \\
+\hline
+{\em ry} & Raio do elipsóide em Y. \\
+\hline
+{\em rz} & Raio do elipsóide em Z. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -68,6 +91,11 @@ Cut\+Ellipsoid\+::\+Cut\+Ellipsoid (\begin{DoxyParamCaption}\item[{int}]{xcenter
 {\footnotesize\ttfamily \label{class_cut_ellipsoid_a3888e48949c6f89e1fe14bc3f95716fa} 
 void Cut\+Ellipsoid\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sculptor}{Sculptor}} \&}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+Método para desenhar a figura geométrica. 
+\begin{DoxyParams}{Parameters}
+{\em \&s} & \doxylink{class_sculptor}{Sculptor} com a figura geométrica específica. \\
+\hline
+\end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{class_figura_geometrica_a140c20d043bc6bfb4952a367d8ed6c1c}{Figura\+Geometrica}}.
@@ -81,11 +109,19 @@ Implements \mbox{\hyperlink{class_figura_geometrica_a140c20d043bc6bfb4952a367d8e
 {\footnotesize\ttfamily \label{class_cut_ellipsoid_a5d2ee1baae0313b76621fb57c317c2f0} 
 int Cut\+Ellipsoid\+::rx\hspace{0.3cm}{\ttfamily [protected]}}
 
+
+
+Raio do elipsóide em X. 
+
 \Hypertarget{class_cut_ellipsoid_a05d0bb0ec91e61d53d0b952bb8d733f2}\index{CutEllipsoid@{CutEllipsoid}!ry@{ry}}
 \index{ry@{ry}!CutEllipsoid@{CutEllipsoid}}
 \doxysubsubsection{\texorpdfstring{ry}{ry}}
 {\footnotesize\ttfamily \label{class_cut_ellipsoid_a05d0bb0ec91e61d53d0b952bb8d733f2} 
 int Cut\+Ellipsoid\+::ry\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Raio do elipsóide em Y. 
 
 \Hypertarget{class_cut_ellipsoid_aa47df0d08db6ae887e77b13ef142ade1}\index{CutEllipsoid@{CutEllipsoid}!rz@{rz}}
 \index{rz@{rz}!CutEllipsoid@{CutEllipsoid}}
@@ -95,7 +131,11 @@ int Cut\+Ellipsoid\+::rz\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
+Raio do elipsóide em Z. 
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\mbox{\hyperlink{cutellipsoid_8h}{cutellipsoid.\+h}}\item 
-C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\mbox{\hyperlink{cutellipsoid_8cpp}{cutellipsoid.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\+Project\+\_\+\+Figura\+\_\+\+Geometrica/\mbox{\hyperlink{cutellipsoid_8h}{cutellipsoid.\+h}}\item 
+C\+:/\+Users/\+Gusto/\+Desktop/projects/figura\+\_\+geometrica/\+Project\+\_\+\+Figura\+\_\+\+Geometrica/\mbox{\hyperlink{cutellipsoid_8cpp}{cutellipsoid.\+cpp}}\end{DoxyCompactItemize}

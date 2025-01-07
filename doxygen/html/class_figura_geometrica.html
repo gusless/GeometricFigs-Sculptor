@@ -24,10 +24,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="favicon.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">Sculptor - Figura Geométrica<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Sculptor - Figura Geométrica
    </div>
-   <div id="projectbrief">Este projeto lê informações de um arquivo txt e transforma em um arquivo de visualização 3D .off</div>
+   <div id="projectbrief">Projeto desenvolvido em C++ com programação orientada a objetos, que converte arquivos TXT contendo uma série de instruções predefinidas em arquivos OFF, amplamente utilizados para representar objetos 3D. A aplicação foca na eficiência e na organização do código para garantir a fácil manutenção e extensibilidade.</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +94,9 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 
+<p>Classe base abstrata para representar figuras geométricas.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="figurageometrica_8h_source.html">figurageometrica.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for FiguraGeometrica:</div>
@@ -100,44 +104,57 @@ Inheritance diagram for FiguraGeometrica:</div>
  <div class="center">
   <img src="class_figura_geometrica.png" usemap="#FiguraGeometrica_map" alt=""/>
   <map id="FiguraGeometrica_map" name="FiguraGeometrica_map">
-<area href="class_cut_box.html" alt="CutBox" shape="rect" coords="123,56,236,80"/>
-<area href="class_cut_ellipsoid.html" alt="CutEllipsoid" shape="rect" coords="123,112,236,136"/>
-<area href="class_cut_sphere.html" alt="CutSphere" shape="rect" coords="123,168,236,192"/>
-<area href="class_cut_voxel.html" alt="CutVoxel" shape="rect" coords="123,224,236,248"/>
-<area href="class_put_box.html" alt="PutBox" shape="rect" coords="123,280,236,304"/>
-<area href="class_put_ellipsoid.html" alt="PutEllipsoid" shape="rect" coords="123,336,236,360"/>
-<area href="class_put_sphere.html" alt="PutSphere" shape="rect" coords="123,392,236,416"/>
-<area href="class_put_voxel.html" alt="PutVoxel" shape="rect" coords="123,448,236,472"/>
+<area href="class_cut_box.html" title="Sub-classe de FiguraGeométrica para apagar um paralelepípedo com as coordenadas especificadas." alt="CutBox" shape="rect" coords="123,56,236,80"/>
+<area href="class_cut_ellipsoid.html" title="Sub-classe de FiguraGeométrica para apagar um elipsóide com as coordenadas especificadas." alt="CutEllipsoid" shape="rect" coords="123,112,236,136"/>
+<area href="class_cut_sphere.html" title="Sub-classe de FiguraGeométrica para apagar uma esfera com as coordenadas especificadas." alt="CutSphere" shape="rect" coords="123,168,236,192"/>
+<area href="class_cut_voxel.html" title="Sub-classe de FiguraGeométrica para colocar um voxel em uma coordenada específicada." alt="CutVoxel" shape="rect" coords="123,224,236,248"/>
+<area href="class_put_box.html" title="Sub-classe de FiguraGeométrica para colocar um paralelepípedo com tamanho, cor e coordenadas especifi..." alt="PutBox" shape="rect" coords="123,280,236,304"/>
+<area href="class_put_ellipsoid.html" title="Sub-classe de FiguraGeométrica para colocar um elipsóide com tamanho, cor e coordenadas especificados..." alt="PutEllipsoid" shape="rect" coords="123,336,236,360"/>
+<area href="class_put_sphere.html" title="Sub-classe de FiguraGeométrica para colocar uma esfera com tamanho, cor e coordenadas especificados." alt="PutSphere" shape="rect" coords="123,392,236,416"/>
+<area href="class_put_voxel.html" title="Sub-classe de FiguraGeométrica para colocar um voxel em uma coordenada específicada." alt="PutVoxel" shape="rect" coords="123,448,236,472"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a81d7c7efaea511e60a15f5a363138dd9" id="r_a81d7c7efaea511e60a15f5a363138dd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81d7c7efaea511e60a15f5a363138dd9">FiguraGeometrica</a> ()</td></tr>
+<tr class="memdesc:a81d7c7efaea511e60a15f5a363138dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão da classe <code><a class="el" href="class_figura_geometrica.html" title="Classe base abstrata para representar figuras geométricas.">FiguraGeometrica</a></code>.  <br /></td></tr>
 <tr class="separator:a81d7c7efaea511e60a15f5a363138dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad13b9bccf1b14f6b9fbc662aad61ffd1" id="r_ad13b9bccf1b14f6b9fbc662aad61ffd1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad13b9bccf1b14f6b9fbc662aad61ffd1">~FiguraGeometrica</a> ()</td></tr>
+<tr class="memdesc:ad13b9bccf1b14f6b9fbc662aad61ffd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor virtual da classe <code><a class="el" href="class_figura_geometrica.html" title="Classe base abstrata para representar figuras geométricas.">FiguraGeometrica</a></code>.  <br /></td></tr>
 <tr class="separator:ad13b9bccf1b14f6b9fbc662aad61ffd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a140c20d043bc6bfb4952a367d8ed6c1c" id="r_a140c20d043bc6bfb4952a367d8ed6c1c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a140c20d043bc6bfb4952a367d8ed6c1c">draw</a> (<a class="el" href="class_sculptor.html">Sculptor</a> &amp;s)=0</td></tr>
+<tr class="memdesc:a140c20d043bc6bfb4952a367d8ed6c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método virtual puro para desenhar a figura.  <br /></td></tr>
 <tr class="separator:a140c20d043bc6bfb4952a367d8ed6c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ac7808b6b6074bf744ee597851651e9c5" id="r_ac7808b6b6074bf744ee597851651e9c5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7808b6b6074bf744ee597851651e9c5">x</a></td></tr>
+<tr class="memdesc:ac7808b6b6074bf744ee597851651e9c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordenada X da figura.  <br /></td></tr>
 <tr class="separator:ac7808b6b6074bf744ee597851651e9c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5ddcf7439aa7274d7f818e49503402a" id="r_ae5ddcf7439aa7274d7f818e49503402a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5ddcf7439aa7274d7f818e49503402a">y</a></td></tr>
+<tr class="memdesc:ae5ddcf7439aa7274d7f818e49503402a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordenada Y da figura.  <br /></td></tr>
 <tr class="separator:ae5ddcf7439aa7274d7f818e49503402a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa121633ded95c66066a32ba51a118fbb" id="r_aa121633ded95c66066a32ba51a118fbb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa121633ded95c66066a32ba51a118fbb">z</a></td></tr>
+<tr class="memdesc:aa121633ded95c66066a32ba51a118fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordenada Z da figura.  <br /></td></tr>
 <tr class="separator:aa121633ded95c66066a32ba51a118fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a4f57efb1a6c525c8aeee34c92e7eab" id="r_a0a4f57efb1a6c525c8aeee34c92e7eab"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a4f57efb1a6c525c8aeee34c92e7eab">r</a></td></tr>
+<tr class="memdesc:a0a4f57efb1a6c525c8aeee34c92e7eab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intensidade da cor vermelha, de 0 a 255.  <br /></td></tr>
 <tr class="separator:a0a4f57efb1a6c525c8aeee34c92e7eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51930549bcb90d016b824f10f95df355" id="r_a51930549bcb90d016b824f10f95df355"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51930549bcb90d016b824f10f95df355">g</a></td></tr>
+<tr class="memdesc:a51930549bcb90d016b824f10f95df355"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intensidade da cor verde, de 0 a 255.  <br /></td></tr>
 <tr class="separator:a51930549bcb90d016b824f10f95df355"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25e5d6c21410103c25ec55c0117dac0d" id="r_a25e5d6c21410103c25ec55c0117dac0d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25e5d6c21410103c25ec55c0117dac0d">b</a></td></tr>
+<tr class="memdesc:a25e5d6c21410103c25ec55c0117dac0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intensidade da cor azul, de 0 a 255.  <br /></td></tr>
 <tr class="separator:a25e5d6c21410103c25ec55c0117dac0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7c8a027fcec3c357265b90458a4d165" id="r_ae7c8a027fcec3c357265b90458a4d165"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7c8a027fcec3c357265b90458a4d165">a</a></td></tr>
+<tr class="memdesc:ae7c8a027fcec3c357265b90458a4d165"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transparência (alpha), onde 0.0 é totalmente transparente e 1.0 é totalmente opaco.  <br /></td></tr>
 <tr class="separator:ae7c8a027fcec3c357265b90458a4d165"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Classe base abstrata para representar figuras geométricas. </p>
+<p>Esta classe define uma interface genérica para figuras geométricas que podem ser desenhadas em um objeto do tipo <code><a class="el" href="class_sculptor.html" title="Classe base do programa, serve para colocar e retirar voxels, escolher a cor e escrever em um arquivo...">Sculptor</a></code>. As figuras geométricas herdam desta classe para implementar comportamentos específicos no método <code>draw</code>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a81d7c7efaea511e60a15f5a363138dd9" name="a81d7c7efaea511e60a15f5a363138dd9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a81d7c7efaea511e60a15f5a363138dd9">&#9670;&#160;</a></span>FiguraGeometrica()</h2>
 
@@ -152,6 +169,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Construtor padrão da classe <code><a class="el" href="class_figura_geometrica.html" title="Classe base abstrata para representar figuras geométricas.">FiguraGeometrica</a></code>. </p>
 
 </div>
 </div>
@@ -177,6 +196,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destrutor virtual da classe <code><a class="el" href="class_figura_geometrica.html" title="Classe base abstrata para representar figuras geométricas.">FiguraGeometrica</a></code>. </p>
 
 </div>
 </div>
@@ -204,6 +225,15 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Método virtual puro para desenhar a figura. </p>
+<p>Este método deve ser implementado pelas classes derivadas, que definem como a figura será desenhada em um objeto do tipo <code><a class="el" href="class_sculptor.html" title="Classe base do programa, serve para colocar e retirar voxels, escolher a cor e escrever em um arquivo...">Sculptor</a></code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>Referência ao objeto <code><a class="el" href="class_sculptor.html" title="Classe base do programa, serve para colocar e retirar voxels, escolher a cor e escrever em um arquivo...">Sculptor</a></code> onde a figura será desenhada. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implemented in <a class="el" href="class_cut_box.html#a95d16d1e3164807a1f006614b753e205">CutBox</a>, <a class="el" href="class_cut_ellipsoid.html#a3888e48949c6f89e1fe14bc3f95716fa">CutEllipsoid</a>, <a class="el" href="class_cut_sphere.html#a8bde72ea67f248b4eec5435c695efcee">CutSphere</a>, <a class="el" href="class_cut_voxel.html#a72bb583540f93f6f5345db1499417716">CutVoxel</a>, <a class="el" href="class_put_box.html#a58946137f1741c2c9b7a5bbcc229f5d8">PutBox</a>, <a class="el" href="class_put_ellipsoid.html#a7563e424e3b7560c00c7cc2a3fc16425">PutEllipsoid</a>, <a class="el" href="class_put_sphere.html#a2c3b27fe4f8041fa6c487b636b2ab017">PutSphere</a>, and <a class="el" href="class_put_voxel.html#a5bb3d4986a185b22ab050a41c7bb0017">PutVoxel</a>.</p>
 
 </div>
@@ -229,6 +259,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Transparência (alpha), onde 0.0 é totalmente transparente e 1.0 é totalmente opaco. </p>
+
 </div>
 </div>
 <a id="a25e5d6c21410103c25ec55c0117dac0d" name="a25e5d6c21410103c25ec55c0117dac0d"></a>
@@ -250,6 +282,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Intensidade da cor azul, de 0 a 255. </p>
 
 </div>
 </div>
@@ -273,6 +307,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Intensidade da cor verde, de 0 a 255. </p>
+
 </div>
 </div>
 <a id="a0a4f57efb1a6c525c8aeee34c92e7eab" name="a0a4f57efb1a6c525c8aeee34c92e7eab"></a>
@@ -294,6 +330,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Intensidade da cor vermelha, de 0 a 255. </p>
 
 </div>
 </div>
@@ -317,6 +355,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Coordenada X da figura. </p>
+
 </div>
 </div>
 <a id="ae5ddcf7439aa7274d7f818e49503402a" name="ae5ddcf7439aa7274d7f818e49503402a"></a>
@@ -338,6 +378,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Coordenada Y da figura. </p>
 
 </div>
 </div>
@@ -361,11 +403,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Coordenada Z da figura. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/Gusto/Desktop/projects/figura_geometrica/<a class="el" href="figurageometrica_8h_source.html">figurageometrica.h</a></li>
-<li>C:/Users/Gusto/Desktop/projects/figura_geometrica/<a class="el" href="figurageometrica_8cpp.html">figurageometrica.cpp</a></li>
+<li>C:/Users/Gusto/Desktop/projects/figura_geometrica/Project_Figura_Geometrica/<a class="el" href="figurageometrica_8h_source.html">figurageometrica.h</a></li>
+<li>C:/Users/Gusto/Desktop/projects/figura_geometrica/Project_Figura_Geometrica/<a class="el" href="figurageometrica_8cpp.html">figurageometrica.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
