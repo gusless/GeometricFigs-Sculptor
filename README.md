@@ -102,13 +102,44 @@ Essa estrutura melhorada organiza a informação de maneira mais clara, detalha 
 | **FOR_PUTELLIPSOID** | Adiciona elipsoides iterativamente ao longo de um eixo.                     | `FOR_PUTELLIPSOID IT FOR_I XCENTER YCENTER ZCENTER RX RY RZ R G B A` | `IT`, `FOR_I`: Intervalo do loop; `XCENTER`, `YCENTER`, `ZCENTER`: Coordenadas (`-1` indica eixo iterado); `RX`, `RY`, `RZ`: Raios; `R`, `G`, `B`: Cor; `A`: Transparência. | `FOR_PUTELLIPSOID 1 5 -1 15 15 3 5 2 1.0 0.0 1.0 0.8`     |
 | **FOR_CUTELLIPSOID** | Remove elipsoides iterativamente ao longo de um eixo.                       | `FOR_CUTELLIPSOID IT FOR_I XCENTER YCENTER ZCENTER RX RY RZ`          | `IT`, `FOR_I`: Intervalo do loop; `XCENTER`, `YCENTER`, `ZCENTER`: Coordenadas (`-1` indica eixo iterado); `RX`, `RY`, `RZ`: Raios. | `FOR_CUTELLIPSOID 1 5 -1 15 15 3 5 2`                     |
 
+### Explicação do Iterador `-1` nos Comandos `FOR_ ...`
+
+Nos comandos `FOR_PUTVOXEL`, `FOR_CUTVOXEL`, `FOR_PUTSPHERE`, `FOR_CUTSPHERE`, `FOR_PUTELLIPSOID` o valor `-1` nas coordenadas `x`, `y` ou `z` indica que a coordenada em questão será **iterada** dentro de um intervalo de valores definidos pelo loop. Esse comportamento é útil para criar padrões e formas que variam ao longo de uma ou mais dimensões no espaço tridimensional, enquanto as outras coordenadas permanecem fixas.
+
+#### Comportamento do Iterador `-1`:
+
+1. **Quando `x == -1`**:
+   - A coordenada `x` será **iterada** ao longo do intervalo definido por `it` e `for_i`, enquanto as coordenadas `y` e `z` permanecem fixas.
+   - Exemplo:
+     ```txt
+     FOR_PUTVOXEL 1 10 -1 5 5 5 255 0 0 1
+     ```
+     Isso criará voxels ao longo da coordenada `x` (de 1 até 10), enquanto `y = 5`, `z = 5`, e as cores são `r = 255`, `g = 0`, `b = 0`, `a = 1`.
+
+2. **Quando `y == -1`**:
+   - A coordenada `y` será **iterada** ao longo do intervalo definido por `it` e `for_i`, enquanto as coordenadas `x` e `z` permanecem fixas.
+   - Exemplo:
+     ```txt
+     FOR_PUTVOXEL 1 10 5 -1 5 255 0 0 1
+     ```
+     Isso criará voxels ao longo da coordenada `y` (de 1 até 10), enquanto `x = 5`, `z = 5`, e as cores são `r = 255`, `g = 0`, `b = 0`, `a = 1`.
+
+3. **Quando `z == -1`**:
+   - A coordenada `z` será **iterada** ao longo do intervalo definido por `it` e `for_i`, enquanto as coordenadas `x` e `y` permanecem fixas.
+   - Exemplo:
+     ```txt
+     FOR_PUTVOXEL 1 10 5 5 -1 255 0 0 1
+     ```
+     Isso criará voxels ao longo da coordenada `z` (de 1 até 10), enquanto `x = 5`, `y = 5`, e as cores são `r = 255`, `g = 0`, `b = 0`, `a = 1`.
+
+Essa funcionalidade é útil para a criação de formas e padrões tridimensionais, otimizando a forma como as instruções são aplicadas ao espaço tridimensional.
+
 ## Requisitos
 
 Certifique-se de que você tenha os seguintes itens instalados no seu ambiente:
 
 - **Compilador C++** compatível com C++17 (ou superior).
 - **CMake** (para configurar e construir o projeto).
-- **Qt Creator** (opcional, para edição e execução).
 - **Bibliotecas padrão do sistema de arquivos (`<filesystem>`).**
 
 ---
